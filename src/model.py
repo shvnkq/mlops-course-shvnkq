@@ -51,13 +51,20 @@ def generate(tokenizer, model, params: dict, text: str) -> tuple[str, int]:
     prompt = build_prompt(tokenizer, params, text)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     temperature = params["generate"]["temperature"]
+    generation_kwargs = {
+        "do_sample": temperature > 0,
+        "temperature": temperature if temperature > 0 else None,
+        # Некоторые модели сохраняют sampling-параметры в generation_config.
+        # Явно отключаем их в greedy-режиме, чтобы конфиг и логи не противоречили
+        # выбранному детерминированному способу генерации.
+        **({"top_p": None, "top_k": None} if temperature == 0 else {}),
+    }
 
     with torch.inference_mode():
         output = model.generate(
             **inputs,
             max_new_tokens=params["generate"]["max_new_tokens"],
-            do_sample=temperature > 0,
-            **({"temperature": temperature} if temperature > 0 else {}),
+            **generation_kwargs,
         )
 
     new_tokens = output[0][inputs["input_ids"].shape[1]:]
