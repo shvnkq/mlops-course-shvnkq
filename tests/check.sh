@@ -2,6 +2,13 @@
 # Самопроверка домашней работы 2.
 # Зелёный check.sh необходим для сдачи, но не достаточен: код читается глазами.
 set -uo pipefail
+
+# Git Bash inherits the legacy Windows console encoding, while this script and
+# its Python snippets contain UTF-8 text. Force Python's standard streams to
+# UTF-8 so Russian diagnostics are not rendered as squares or mojibake.
+export PYTHONUTF8=1
+export PYTHONIOENCODING=utf-8
+
 cd "$(dirname "$0")/.."
 
 fails=0
