@@ -1,20 +1,20 @@
 {
-  "version": "v1",
-  "examples": 1214,
+  "version": "v2",
+  "examples": 1915,
   "system_prompts": 5,
-  "groups": 80,
-  "largest_group": "география: bhutan",
-  "largest_group_share": 0.0132,
+  "groups": 100,
+  "largest_group": "география: uruguay",
+  "largest_group_share": 0.0104,
   "answer_len": {
     "p10": 41,
     "p50": 54,
     "p90": 139,
     "ratio_p90_p10": 3.39,
-    "cv": 0.529,
+    "cv": 0.531,
     "min": 34,
     "max": 154
   },
-  "same_length_share": 0.0865,
+  "same_length_share": 0.0742,
   "duplicate_answer_share": 0.0,
   "thresholds": {
     "min_examples": 1000,
@@ -27,5 +27,5 @@
   },
   "violations": [],
   "passed": true,
-  "seconds": 0.07
+  "seconds": 0.1
 }

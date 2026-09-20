@@ -1,7 +1,7 @@
 # Единственная точка конфигурации ДЗ 3.
 
 collect:
-  version: "v1"
+  version: "v2"
   seed: 42
   versions:
     v1:
@@ -20,7 +20,7 @@ collect:
 clean:
   min_user_chars: 30
   max_user_chars: 1000
-  min_assistant_chars: 10
+  min_assistant_chars: 2
   near_dup:
     enabled: true
     shingle_words: 4

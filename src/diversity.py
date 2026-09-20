@@ -126,7 +126,9 @@ def main() -> None:
     mpath.write_text(json.dumps(metrics, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     if failed:
-        raise DiversityError("diversity: гейт не пройден — " + "; ".join(failed))
+        for violation in failed:
+            print(f"diversity: {violation}")
+        raise SystemExit(1)
 
     print(
         f"diversity: {stats['examples']} строк, {stats['system_prompts']} системных промптов, "
