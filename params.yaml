@@ -1,45 +1,62 @@
-# Единственное место, где живёт имя модели.
-# Менять модель под своё железо нужно ЗДЕСЬ, а не в коде.
-model:
-  name: "Qwen/Qwen3-0.6B"
-  dtype: "bfloat16"
-  device: "auto"            # auto | cpu | cuda | mps
+# Единственная точка конфигурации ДЗ 3.
 
-generate:
-  max_new_tokens: 200
-  temperature: 0.0          # жадная детерминированная генерация
+collect:
+  version: "v1"
   seed: 42
-  enable_thinking: false    # Qwen3 без этого отвечает <think>-блоком
+  versions:
+    v1:
+      countries: 80
+      cities_per_country: 4
+    v2:
+      countries: 100
+      cities_per_country: 5
+  system_prompts:
+    - "Ты — справочник по мировой географии. Отвечай по-русски точно и кратко."
+    - "Помоги проверить знание географии: дай прямой ответ без лишних рассуждений."
+    - "Отвечай на географические вопросы, опираясь только на приведённый факт."
+    - "Ты помогаешь готовиться к викторине по географии. Ответь одним предложением."
+    - "Дай лаконичный и фактологичный ответ на вопрос о городе мира."
 
-bench:
-  warmup_runs: 1            # прогрев не засчитывается в замер
-  measure_runs: 3
-  prompt: "Объясни, что такое MLOps, в трёх предложениях."
+clean:
+  min_user_chars: 30
+  max_user_chars: 1000
+  min_assistant_chars: 10
+  near_dup:
+    enabled: true
+    shingle_words: 4
+    num_perm: 64
+    threshold: 0.85
+  pii:
+    enabled: true
 
-hooks:
-  prompt: "Объясни, что такое MLOps, в трёх предложениях."
-  plot: "docs/activations.png"
+diversity:
+  min_examples: 1000
+  min_system_prompts: 3
+  min_groups: 50
+  max_group_share: 0.10
+  min_answer_len_ratio: 1.6
+  max_same_length_share: 0.25
+  max_duplicate_answer_share: 0.30
 
-memory:
-  # Короткая последовательность заметно ускоряет CPU-замер; каждый режим всё
-  # равно выполняет настоящий forward, а обучающие — backward и шаг AdamW.
-  seq_len: 4
-  batch_size: 1
-  lr: 1.0e-5
-  repeats: 1
+split:
+  group_key: "topic"
+  ratios:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+  seed: 42
 
-lora:
-  alpha_ratio: 2
-  dropout: 0.0
-  configs:
-    - name: "r=8, q_proj+v_proj"
-      r: 8
-      target_modules: ["q_proj", "v_proj"]
-    - name: "r=16, все линейные"
-      r: 16
-      target_modules: ["q_proj", "k_proj", "v_proj", "o_proj",
-                       "gate_proj", "up_proj", "down_proj"]
+contamination:
+  threshold: 0.85
 
-report:
-  json: "docs/report.json"
-  markdown: "docs/anatomy.md"
+paths:
+  raw: "data/raw.jsonl"
+  clean: "data/clean.jsonl"
+  train: "data/train.jsonl"
+  val: "data/val.jsonl"
+  test: "data/test.jsonl"
+  metrics_collect: "metrics/collect.json"
+  metrics_clean: "metrics/clean.json"
+  metrics_split: "metrics/split.json"
+  metrics_diversity: "metrics/diversity.json"
+  datasheet: "docs/datasheet.md"

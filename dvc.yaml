@@ -1,0 +1,87 @@
+stages:
+  collect:
+    cmd: python -X utf8 -m src.collect
+    deps:
+      - src/collect.py
+      - src/config.py
+      - pyproject.toml
+      - uv.lock
+    params:
+      - collect
+      - paths.raw
+      - paths.metrics_collect
+    outs:
+      - data/raw.jsonl
+    metrics:
+      - metrics/collect.json:
+          cache: false
+
+  clean:
+    cmd: python -X utf8 -m src.clean
+    deps:
+      - data/raw.jsonl
+      - src/clean.py
+      - src/dedup.py
+      - src/pii.py
+      - src/schema.py
+      - src/stats.py
+      - src/textnorm.py
+      - src/config.py
+    params:
+      - clean
+      - collect.version
+      - paths.raw
+      - paths.clean
+      - paths.metrics_clean
+    outs:
+      - data/clean.jsonl
+    metrics:
+      - metrics/clean.json:
+          cache: false
+
+  diversity:
+    cmd: python -X utf8 -m src.diversity
+    deps:
+      - data/clean.jsonl
+      - src/diversity.py
+      - src/stats.py
+      - src/schema.py
+      - src/textnorm.py
+      - src/config.py
+    params:
+      - diversity
+      - collect.version
+      - split.group_key
+      - paths.clean
+      - paths.metrics_diversity
+    metrics:
+      - metrics/diversity.json:
+          cache: false
+
+  split:
+    cmd: python -X utf8 -m src.split
+    deps:
+      - data/clean.jsonl
+      - metrics/diversity.json
+      - src/split.py
+      - src/contamination.py
+      - src/dedup.py
+      - src/schema.py
+      - src/textnorm.py
+      - src/config.py
+    params:
+      - split
+      - contamination
+      - clean.near_dup
+      - collect.version
+      - paths.train
+      - paths.val
+      - paths.test
+      - paths.metrics_split
+    outs:
+      - data/train.jsonl
+      - data/val.jsonl
+      - data/test.jsonl
+    metrics:
+      - metrics/split.json:
+          cache: false

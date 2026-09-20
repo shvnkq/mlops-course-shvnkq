@@ -1,10 +1,7 @@
 __pycache__/
-*.py[cod]
 .venv/
-.DS_Store
-docs/bench.json
-docs/report.json
-out1.txt
-out2.txt
-params.yaml.bak
-params.yaml.orig
+dvc_remote/
+data/
+*.bak
+*.orig
+~$*

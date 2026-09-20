@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "source": "GeoNames via geonamescache",
+  "geonamescache_version": "3.0.2",
+  "countries": 80,
+  "cities": 320,
+  "rows_written": 1280,
+  "system_prompt_variants": 5,
+  "question_kinds": {
+    "country": 320,
+    "population": 320,
+    "coordinates": 320,
+    "timezone": 320
+  },
+  "seconds": 0.29
+}

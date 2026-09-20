@@ -1,0 +1,33 @@
+{
+  "version": "v1",
+  "seed": 42,
+  "group_key": "topic",
+  "groups_total": 80,
+  "sizes": {
+    "train": 974,
+    "val": 120,
+    "test": 120
+  },
+  "groups": {
+    "train": 64,
+    "val": 8,
+    "test": 8
+  },
+  "ratios_actual": {
+    "train": 0.8023,
+    "val": 0.0988,
+    "test": 0.0988
+  },
+  "contamination": {
+    "id_overlap": 0,
+    "text_overlap": 0,
+    "group_overlap": 0,
+    "near_dup_pairs": 0,
+    "examples": {
+      "id": [],
+      "group": [],
+      "near_dup": []
+    }
+  },
+  "seconds": 0.35
+}

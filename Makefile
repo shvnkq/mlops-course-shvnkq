@@ -1,4 +1,4 @@
-.PHONY: install generate bench inspect check clean
+.PHONY: install repro v1 v2 diff dag diversity contamination check clean
 
 ifeq ($(OS),Windows_NT)
 CHECK_BASH := "$(shell git --exec-path)/../../../bin/bash.exe"
@@ -9,17 +9,31 @@ endif
 install:
 	uv sync
 
-generate:
-	uv run python -m src.generate
+repro:
+	uv run dvc repro
 
-bench:
-	uv run python -m src.bench
+v1:
+	uv run python scripts/set_version.py v1
+	uv run dvc repro
 
-inspect:
-	uv run python -m src.inspect_model
+v2:
+	uv run python scripts/set_version.py v2
+	uv run dvc repro
+
+diff:
+	uv run dvc metrics diff
+
+dag:
+	uv run dvc dag
+
+diversity:
+	uv run python -m src.diversity
+
+contamination:
+	uv run python scripts/check_contamination.py
 
 check:
 	$(CHECK_BASH) tests/check.sh
 
 clean:
-	rm -rf docs/bench.json docs/report.json out1.txt out2.txt params.yaml.bak
+	rm -rf data metrics/*.json params.yaml.bak params.yaml.orig
