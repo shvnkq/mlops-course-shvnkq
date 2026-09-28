@@ -85,3 +85,29 @@ stages:
     metrics:
       - metrics/split.json:
           cache: false
+
+  tokenize:
+    cmd: python -X utf8 -m src.tokenize_data
+    deps:
+      - data/train.jsonl
+      - data/val.jsonl
+      - src/tokenize_data.py
+      - src/prompt.py
+      - src/collate.py
+      - src/pack.py
+      - src/config.py
+    params:
+      - model
+      - data.train_jsonl
+      - data.val_jsonl
+      - data.out_dir
+      - tokenize
+      - packing
+      - train_estimate
+    outs:
+      - data/tokenized
+      - docs/tokenize_report.md:
+          cache: false
+    metrics:
+      - metrics/tokenize.json:
+          cache: false
