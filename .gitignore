@@ -2,6 +2,10 @@ __pycache__/
 .venv/
 dvc_remote/
 data/
+models/
+benchmark/
+runs/
+metrics/*.json
 *.bak
 *.orig
 ~$*

@@ -1,13 +1,55 @@
-# Единая конфигурация пайплайна ДЗ 3 и стадии tokenize ДЗ 4.
+# Единая конфигурация пайплайна ДЗ 3–5.
 
 model:
   name: "Qwen/Qwen3-0.6B"
   enable_thinking: false
+  device: "cpu"
+  dtype: "float32"
 
 data:
   train_jsonl: "data/train.jsonl"
   val_jsonl: "data/val.jsonl"
   out_dir: "data/tokenized"
+  train: "data/tokenized/train.pt"
+  val: "data/tokenized/val.pt"
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+train:
+  seed: 42
+  epochs: 1
+  batch_size: 1
+  grad_accum: 8
+  lr: 2.0e-4
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  eval_every: 10
+  eval_batch_size: 1
+  gradient_checkpointing: true
+  max_steps: null
+  cpu_threads: 6
+  deterministic: true
+
+variants:
+  - name: "all_layers"
+    freeze_first: 0
+  - name: "freeze14"
+    freeze_first: 14
+
+compare:
+  max_new_tokens: 40
+  system: "Отвечай на географические вопросы, опираясь только на приведённый факт."
+  prompts:
+    - "В какой стране находится город Dar es Salaam? Укажи современное название страны."
+    - "Какова численность населения города Dar es Salaam в использованном снимке GeoNames?"
+    - "Укажи географические координаты города Dar es Salaam по данным GeoNames."
+    - "Назови часовой пояс, к которому относится город Dar es Salaam."
+    - "Назови страну, на территории которой расположен город Mwanza."
 
 tokenize:
   max_seq_len: 144
@@ -82,3 +124,7 @@ paths:
   metrics_split: "metrics/split.json"
   metrics_diversity: "metrics/diversity.json"
   datasheet: "docs/datasheet.md"
+  models: "models"
+  metrics: "metrics"
+  curves: "docs/curves.png"
+  compare: "docs/compare.md"

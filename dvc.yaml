@@ -14,7 +14,7 @@ stages:
       - data/raw.jsonl
     metrics:
       - metrics/collect.json:
-          cache: false
+          cache: true
 
   clean:
     cmd: python -X utf8 -m src.clean
@@ -37,7 +37,7 @@ stages:
       - data/clean.jsonl
     metrics:
       - metrics/clean.json:
-          cache: false
+          cache: true
 
   diversity:
     cmd: python -X utf8 -m src.diversity
@@ -56,7 +56,7 @@ stages:
       - paths.metrics_diversity
     metrics:
       - metrics/diversity.json:
-          cache: false
+          cache: true
 
   split:
     cmd: python -X utf8 -m src.split
@@ -84,7 +84,7 @@ stages:
       - data/test.jsonl
     metrics:
       - metrics/split.json:
-          cache: false
+          cache: true
 
   tokenize:
     cmd: python -X utf8 -m src.tokenize_data
@@ -110,4 +110,67 @@ stages:
           cache: false
     metrics:
       - metrics/tokenize.json:
+          cache: true
+
+  train_all:
+    cmd: python -u -X utf8 -m src.train --variant all_layers
+    deps:
+      - data/tokenized/train.pt
+      - data/tokenized/val.pt
+      - src/train.py
+      - src/data.py
+      - src/runtime.py
+      - src/config.py
+      - pyproject.toml
+      - uv.lock
+    params: [model, data, lora, train, variants]
+    outs:
+      - models/adapter_all_layers
+    metrics:
+      - metrics/train_all_layers.json:
+          cache: true
+
+  train_freeze:
+    cmd: python -u -X utf8 -m src.train --variant freeze14
+    deps:
+      - data/tokenized/train.pt
+      - data/tokenized/val.pt
+      - src/train.py
+      - src/data.py
+      - src/runtime.py
+      - src/config.py
+      - pyproject.toml
+      - uv.lock
+    params: [model, data, lora, train, variants]
+    outs:
+      - models/adapter_freeze14
+    metrics:
+      - metrics/train_freeze14.json:
+          cache: true
+
+  plot:
+    cmd: python -X utf8 -m src.plot
+    deps:
+      - metrics/train_all_layers.json
+      - metrics/train_freeze14.json
+      - src/plot.py
+      - src/config.py
+    params: [paths.curves]
+    outs:
+      - docs/curves.png:
           cache: false
+
+  compare:
+    cmd: python -X utf8 -m src.compare --variant all_layers
+    deps:
+      - models/adapter_all_layers
+      - src/compare.py
+      - src/prompt.py
+      - src/runtime.py
+      - src/config.py
+    params: [model, compare, train.cpu_threads, train.deterministic, train.seed]
+    outs:
+      - docs/compare.md:
+          cache: false
+      # Generated answers are a text artifact, not numeric DVC metrics.
+      - metrics/compare_all_layers.json

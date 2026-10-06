@@ -5,8 +5,8 @@ stages:
     deps:
     - path: pyproject.toml
       hash: md5
-      md5: c907fd8b3508afdf2c291c2bed49d4ed
-      size: 640
+      md5: 14dcf82f62b3c3bd12341fd99efe2edc
+      size: 706
     - path: src/collect.py
       hash: md5
       md5: 8f101ec9c1ac3874814604c33e2e6801
@@ -17,8 +17,8 @@ stages:
       size: 768
     - path: uv.lock
       hash: md5
-      md5: 2e53b1c1468f35959b344466e5e77c5a
-      size: 203810
+      md5: c8a8b5e18cd928956c817573b22d2208
+      size: 226314
     params:
       params.yaml:
         collect:
@@ -270,6 +270,8 @@ stages:
         model:
           name: Qwen/Qwen3-0.6B
           enable_thinking: false
+          device: cpu
+          dtype: float32
         packing:
           enabled: false
           batch_size: 8
@@ -288,9 +290,272 @@ stages:
       nfiles: 2
     - path: docs/tokenize_report.md
       hash: md5
-      md5: ae3ac61f235eaf4a38dded9709c1eb3e
-      size: 2421
+      md5: 5da0a0540aba858d5bfa777dc477ce14
+      size: 2386
     - path: metrics/tokenize.json
       hash: md5
       md5: a68f97e99a8bb1bad7c0c863c2b6c4be
       size: 2216
+  train_all:
+    cmd: python -u -X utf8 -m src.train --variant all_layers
+    deps:
+    - path: data/tokenized/train.pt
+      hash: md5
+      md5: 6aba79d0fb64b5e45bcf1415e348392a
+      size: 1471201
+    - path: data/tokenized/val.pt
+      hash: md5
+      md5: f511a9ada68fda2ec936883199a8abc5
+      size: 180565
+    - path: pyproject.toml
+      hash: md5
+      md5: 14dcf82f62b3c3bd12341fd99efe2edc
+      size: 706
+    - path: src/config.py
+      hash: md5
+      md5: 54ce34cea54f73733334a823c8d52e77
+      size: 768
+    - path: src/data.py
+      hash: md5
+      md5: d78a3ccae087e8bcfdc3b3c945d66089
+      size: 1985
+    - path: src/runtime.py
+      hash: md5
+      md5: 3202bde02d9d62b34cefbca540297971
+      size: 2908
+    - path: src/train.py
+      hash: md5
+      md5: cd4921edba7dbcf008cfed71e5fb1855
+      size: 11839
+    - path: uv.lock
+      hash: md5
+      md5: c8a8b5e18cd928956c817573b22d2208
+      size: 226314
+    params:
+      params.yaml:
+        data:
+          train_jsonl: data/train.jsonl
+          val_jsonl: data/val.jsonl
+          out_dir: data/tokenized
+          train: data/tokenized/train.pt
+          val: data/tokenized/val.pt
+        lora:
+          r: 8
+          alpha: 16
+          dropout: 0.05
+          target_modules:
+          - q_proj
+          - k_proj
+          - v_proj
+          - o_proj
+          - gate_proj
+          - up_proj
+          - down_proj
+        model:
+          name: Qwen/Qwen3-0.6B
+          enable_thinking: false
+          device: cpu
+          dtype: float32
+        train:
+          seed: 42
+          epochs: 1
+          batch_size: 1
+          grad_accum: 8
+          lr: 0.0002
+          warmup_ratio: 0.03
+          weight_decay: 0.0
+          max_grad_norm: 1.0
+          eval_every: 10
+          eval_batch_size: 1
+          gradient_checkpointing: true
+          max_steps:
+          cpu_threads: 6
+          deterministic: true
+        variants:
+        - name: all_layers
+          freeze_first: 0
+        - name: freeze14
+          freeze_first: 14
+    outs:
+    - path: metrics/train_all_layers.json
+      hash: md5
+      md5: 4849476f8ef789f7fdf225e2c5eca603
+      size: 9823
+    - path: models/adapter_all_layers
+      hash: md5
+      md5: f1c21e7683ce2ae53fd956134fe4ccfb.dir
+      size: 36126684
+      nfiles: 11
+  train_freeze:
+    cmd: python -u -X utf8 -m src.train --variant freeze14
+    deps:
+    - path: data/tokenized/train.pt
+      hash: md5
+      md5: 6aba79d0fb64b5e45bcf1415e348392a
+      size: 1471201
+    - path: data/tokenized/val.pt
+      hash: md5
+      md5: f511a9ada68fda2ec936883199a8abc5
+      size: 180565
+    - path: pyproject.toml
+      hash: md5
+      md5: 14dcf82f62b3c3bd12341fd99efe2edc
+      size: 706
+    - path: src/config.py
+      hash: md5
+      md5: 54ce34cea54f73733334a823c8d52e77
+      size: 768
+    - path: src/data.py
+      hash: md5
+      md5: d78a3ccae087e8bcfdc3b3c945d66089
+      size: 1985
+    - path: src/runtime.py
+      hash: md5
+      md5: 3202bde02d9d62b34cefbca540297971
+      size: 2908
+    - path: src/train.py
+      hash: md5
+      md5: cd4921edba7dbcf008cfed71e5fb1855
+      size: 11839
+    - path: uv.lock
+      hash: md5
+      md5: c8a8b5e18cd928956c817573b22d2208
+      size: 226314
+    params:
+      params.yaml:
+        data:
+          train_jsonl: data/train.jsonl
+          val_jsonl: data/val.jsonl
+          out_dir: data/tokenized
+          train: data/tokenized/train.pt
+          val: data/tokenized/val.pt
+        lora:
+          r: 8
+          alpha: 16
+          dropout: 0.05
+          target_modules:
+          - q_proj
+          - k_proj
+          - v_proj
+          - o_proj
+          - gate_proj
+          - up_proj
+          - down_proj
+        model:
+          name: Qwen/Qwen3-0.6B
+          enable_thinking: false
+          device: cpu
+          dtype: float32
+        train:
+          seed: 42
+          epochs: 1
+          batch_size: 1
+          grad_accum: 8
+          lr: 0.0002
+          warmup_ratio: 0.03
+          weight_decay: 0.0
+          max_grad_norm: 1.0
+          eval_every: 10
+          eval_batch_size: 1
+          gradient_checkpointing: true
+          max_steps:
+          cpu_threads: 6
+          deterministic: true
+        variants:
+        - name: all_layers
+          freeze_first: 0
+        - name: freeze14
+          freeze_first: 14
+    outs:
+    - path: metrics/train_freeze14.json
+      hash: md5
+      md5: 2240161c4ddd8f531879a6ddd632adad
+      size: 9822
+    - path: models/adapter_freeze14
+      hash: md5
+      md5: d1ee600e24ebccbf4b211780012a38e6.dir
+      size: 26008208
+      nfiles: 11
+  plot:
+    cmd: python -X utf8 -m src.plot
+    deps:
+    - path: metrics/train_all_layers.json
+      hash: md5
+      md5: 4849476f8ef789f7fdf225e2c5eca603
+      size: 9823
+    - path: metrics/train_freeze14.json
+      hash: md5
+      md5: 2240161c4ddd8f531879a6ddd632adad
+      size: 9822
+    - path: src/config.py
+      hash: md5
+      md5: 54ce34cea54f73733334a823c8d52e77
+      size: 768
+    - path: src/plot.py
+      hash: md5
+      md5: 1766dc7e2a22898bd0ec38dde7256d2b
+      size: 1576
+    params:
+      params.yaml:
+        paths.curves: docs/curves.png
+    outs:
+    - path: docs/curves.png
+      hash: md5
+      md5: 0c4513c3fb662fae736ba6265966612a
+      size: 95859
+  compare:
+    cmd: python -X utf8 -m src.compare --variant all_layers
+    deps:
+    - path: models/adapter_all_layers
+      hash: md5
+      md5: f1c21e7683ce2ae53fd956134fe4ccfb.dir
+      size: 36126684
+      nfiles: 11
+    - path: src/compare.py
+      hash: md5
+      md5: 2ff13b9b4ecb1cbc11029d95cb494ec4
+      size: 4150
+    - path: src/config.py
+      hash: md5
+      md5: 54ce34cea54f73733334a823c8d52e77
+      size: 768
+    - path: src/prompt.py
+      hash: md5
+      md5: f172d4067620a8da242ff3953097ec16
+      size: 4652
+    - path: src/runtime.py
+      hash: md5
+      md5: 3202bde02d9d62b34cefbca540297971
+      size: 2908
+    params:
+      params.yaml:
+        compare:
+          max_new_tokens: 40
+          system: Отвечай на географические вопросы, опираясь только на
+            приведённый факт.
+          prompts:
+          - В какой стране находится город Dar es Salaam? Укажи современное
+            название страны.
+          - Какова численность населения города Dar es Salaam в использованном
+            снимке GeoNames?
+          - Укажи географические координаты города Dar es Salaam по данным
+            GeoNames.
+          - Назови часовой пояс, к которому относится город Dar es Salaam.
+          - Назови страну, на территории которой расположен город Mwanza.
+        model:
+          name: Qwen/Qwen3-0.6B
+          enable_thinking: false
+          device: cpu
+          dtype: float32
+        train.cpu_threads: 6
+        train.deterministic: true
+        train.seed: 42
+    outs:
+    - path: docs/compare.md
+      hash: md5
+      md5: 15f4b56b1b6e1f8ac7daecd1f4084b99
+      size: 2056
+    - path: metrics/compare_all_layers.json
+      hash: md5
+      md5: 4c1c569eda91dcdee2d126604b8354ed
+      size: 1193
