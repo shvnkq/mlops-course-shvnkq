@@ -6,6 +6,11 @@ models/
 benchmark/
 runs/
 metrics/*.json
+metrics/
+mlruns/
+mlartifacts/
+.DS_Store
+*.log
 *.bak
 *.orig
 ~$*

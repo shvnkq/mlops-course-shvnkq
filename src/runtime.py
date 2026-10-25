@@ -38,19 +38,7 @@ def set_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)
-
-
-def setup_runtime(params: dict) -> None:
-    """Настройки одинаковы в обучении, сравнении и офлайн-проверке."""
-    os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
-    torch.set_num_threads(params["train"].get("cpu_threads", 6))
-    if torch.get_num_interop_threads() != 1:
-        torch.set_num_interop_threads(1)
-    torch.use_deterministic_algorithms(params["train"].get("deterministic", True))
-    set_seed(params["train"]["seed"])
 
 
 def allocated_bytes(device: torch.device) -> int:
@@ -60,12 +48,11 @@ def allocated_bytes(device: torch.device) -> int:
         return torch.mps.driver_allocated_memory()
     if device.type == "cuda":
         return torch.cuda.memory_allocated()
-    info = psutil.Process().memory_info()
-    return getattr(info, "peak_wset", info.rss)
+    return psutil.Process().memory_info().rss
 
 
 def memory_metric(device: torch.device) -> str:
     return {
         "mps": "torch.mps.driver_allocated_memory",
         "cuda": "torch.cuda.memory_allocated",
-    }.get(device.type, "peak_wset процесса (Windows)" if os.name == "nt" else "RSS процесса")
+    }.get(device.type, "RSS процесса")

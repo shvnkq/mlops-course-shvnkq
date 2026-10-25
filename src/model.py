@@ -1,66 +1,44 @@
-"""Загрузка модели и сборка промпта. Общий код для генерации и замеров."""
+"""MLflow models-from-code: адаптер + токенизатор + закреплённая база."""
+import json
+import os
+from pathlib import Path
 
-import random
-
-import numpy as np
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-from src.prompt import build_chat_text
+import mlflow
 
 
-def set_seed(seed: int) -> None:
-    """Зафиксировать источники случайности, чтобы прогон воспроизводился."""
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
+class AdapterModel(mlflow.pyfunc.PythonModel):
+    def load_context(self, context):
+        os.environ.setdefault("PYTORCH_MPS_HIGH_WATERMARK_RATIO", "0.5")
+        os.environ.setdefault("PYTORCH_MPS_LOW_WATERMARK_RATIO", "0.4")
+        import torch
+        from peft import PeftModel
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        root = Path(context.artifacts["adapter"])
+        self.manifest = json.loads((root / "manifest.json").read_text())
+        cfg = self.manifest["model"]
+        device = os.environ.get("HW6_DEVICE", cfg["device"])
+        if device == "auto":
+            device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+        dtype = getattr(torch, os.environ.get("HW6_DTYPE", cfg["dtype"]))
+        self.tokenizer = AutoTokenizer.from_pretrained(root, local_files_only=True)
+        base = AutoModelForCausalLM.from_pretrained(cfg["name"], revision=cfg["revision"], dtype=dtype)
+        self.model = PeftModel.from_pretrained(base, root).to(device).eval()
+        self.device = device
+
+    def predict(self, context, model_input, params=None):
+        import torch
+        outputs = []
+        g = self.manifest["generation"]
+        for prompt in model_input["prompt"]:
+            messages = [{"role": "system", "content": g["system"]}, {"role": "user", "content": str(prompt)}]
+            text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True,
+                enable_thinking=self.manifest["model"]["enable_thinking"])
+            batch = self.tokenizer(text, return_tensors="pt").to(self.device)
+            with torch.inference_mode():
+                out = self.model.generate(**batch, max_new_tokens=g["max_new_tokens"], do_sample=False,
+                    pad_token_id=self.tokenizer.pad_token_id or self.tokenizer.eos_token_id)
+            outputs.append(self.tokenizer.decode(out[0, batch["input_ids"].shape[1]:], skip_special_tokens=True))
+        return outputs
 
 
-def load_model(params: dict):
-    """Загрузить токенизатор и модель по имени из конфига."""
-    name = params["model"]["name"]
-    tokenizer = AutoTokenizer.from_pretrained(name)
-    model = AutoModelForCausalLM.from_pretrained(
-        name,
-        dtype=getattr(torch, params["model"]["dtype"]),
-        device_map=params["model"]["device"],
-    )
-    model.eval()
-    return tokenizer, model
-
-
-def build_prompt(tokenizer, params: dict, text: str) -> str:
-    """Собрать промпт шаблоном модели.
-
-    Никогда не склеивайте роли вручную: у каждой модели свой формат,
-    а расхождение шаблонов обучения и инференса — самая частая тихая ошибка.
-    """
-    messages = [{"role": "user", "content": text}]
-    return build_chat_text(tokenizer, messages, params, add_generation_prompt=True)
-
-
-def generate(tokenizer, model, params: dict, text: str) -> tuple[str, int]:
-    """Сгенерировать ответ. Возвращает текст и число новых токенов."""
-    prompt = build_prompt(tokenizer, params, text)
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    temperature = params["generate"]["temperature"]
-    generation_kwargs = {
-        "do_sample": temperature > 0,
-        "temperature": temperature if temperature > 0 else None,
-        # Некоторые модели сохраняют sampling-параметры в generation_config.
-        # Явно отключаем их в greedy-режиме, чтобы конфиг и логи не противоречили
-        # выбранному детерминированному способу генерации.
-        **({"top_p": None, "top_k": None} if temperature == 0 else {}),
-    }
-
-    with torch.inference_mode():
-        output = model.generate(
-            **inputs,
-            max_new_tokens=params["generate"]["max_new_tokens"],
-            **generation_kwargs,
-        )
-
-    new_tokens = output[0][inputs["input_ids"].shape[1]:]
-    return tokenizer.decode(new_tokens, skip_special_tokens=True), new_tokens.numel()
+mlflow.models.set_model(AdapterModel())

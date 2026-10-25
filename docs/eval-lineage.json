@@ -1,0 +1,24 @@
+{
+  "exact_or_group_intersections": 0,
+  "n_train_index": 1536,
+  "n_golden": 60,
+  "n_behavioral": 3,
+  "train_index_ids_match_tensor_ids": true,
+  "dataset": "GeoNames City Facts RU v2",
+  "train_source_sha256": "7aad0dff8513195557b2db19751407a7af01e40cfdfe013398eda4ab002008fd",
+  "heldout_source_sha256": "38687647dc579200d906cbac09ad43aa910ac21390bbdc27eb3740eff9489b22",
+  "train_pt_sha256": "e177bb33e21035003651a68e4872598f54a7b5430ee87c062f37ede6e2503a80",
+  "val_pt_sha256": "21fc1a25c93eefbf26a7907fdbfd1f76df87a37af41577a6d09653e09dd92516",
+  "n_reference_checks": 60,
+  "slices": {
+    "geography": 60,
+    "country": 20,
+    "population": 20,
+    "timezone": 20
+  },
+  "labels": {
+    "A": 20,
+    "C": 20,
+    "B": 20
+  }
+}

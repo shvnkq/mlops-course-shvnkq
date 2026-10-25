@@ -1,130 +1,43 @@
-# Единая конфигурация пайплайна ДЗ 3–5.
-
+# Один бюджет и один val для всех шести кандидатов. Это короткий учебный поиск.
 model:
-  name: "Qwen/Qwen3-0.6B"
+  name: Qwen/Qwen3-0.6B
+  revision: c1899de289a04d12100db370d81485cdf75e47ca
+  device: auto
+  dtype: bfloat16
   enable_thinking: false
-  device: "cpu"
-  dtype: "float32"
-
 data:
-  train_jsonl: "data/train.jsonl"
-  val_jsonl: "data/val.jsonl"
-  out_dir: "data/tokenized"
-  train: "data/tokenized/train.pt"
-  val: "data/tokenized/val.pt"
-
-lora:
-  r: 8
-  alpha: 16
-  dropout: 0.05
-  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
-
+  train: data/tokenized/train.pt
+  val: data/tokenized/val.pt
 train:
   seed: 42
-  epochs: 1
+  max_steps: 4
+  train_limit: 32
+  val_limit: 8
   batch_size: 1
-  grad_accum: 8
-  lr: 2.0e-4
-  warmup_ratio: 0.03
-  weight_decay: 0.0
-  max_grad_norm: 1.0
-  eval_every: 10
-  eval_batch_size: 1
+  grad_accum: 2
+  eval_every: 2
   gradient_checkpointing: true
-  max_steps: null
-  cpu_threads: 6
-  deterministic: true
-
-variants:
-  - name: "all_layers"
-    freeze_first: 0
-  - name: "freeze14"
-    freeze_first: 14
-
-compare:
-  max_new_tokens: 40
-  system: "Отвечай на географические вопросы, опираясь только на приведённый факт."
+lora:
+  dropout: 0.05
+  alpha_over_r: 2
+sweep:
+  - {name: qv-r4-low, r: 4, lr: 0.0001, target_modules: [q_proj, v_proj]}
+  - {name: qv-r4-high, r: 4, lr: 0.0003, target_modules: [q_proj, v_proj]}
+  - {name: qv-r8-low, r: 8, lr: 0.0001, target_modules: [q_proj, v_proj]}
+  - {name: qv-r8-high, r: 8, lr: 0.0003, target_modules: [q_proj, v_proj]}
+  - {name: all-r8-low, r: 8, lr: 0.0001, target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]}
+  - {name: all-r8-high, r: 8, lr: 0.0003, target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]}
+tracking:
+  uri: http://127.0.0.1:5006
+  experiment: hw67-geonames-lora
+registry:
+  name: geonames-qwen-adapter
+  alias: candidate
+  # Порог относительный к базе на ТОМ ЖЕ val; меньше loss — лучше.
+  max_val_ratio: 1.0
+generation:
+  max_new_tokens: 16
+  system: "Ты справочник по географии. Дай краткий ответ на вопрос о городе."
   prompts:
-    - "В какой стране находится город Dar es Salaam? Укажи современное название страны."
-    - "Какова численность населения города Dar es Salaam в использованном снимке GeoNames?"
-    - "Укажи географические координаты города Dar es Salaam по данным GeoNames."
-    - "Назови часовой пояс, к которому относится город Dar es Salaam."
-    - "Назови страну, на территории которой расположен город Mwanza."
-
-tokenize:
-  max_seq_len: 144
-  truncated_warn_ratio: 0.05
-  padding_side: "left"
-
-packing:
-  enabled: false  # Блочная attention-маска не реализована; нет изоляции примеров.
-  batch_size: 8
-
-train_estimate:
-  epochs: 3
-  tokens_per_sec: 4.79  # Реальный CPU-замер генерации из ДЗ 1.
-
-collect:
-  version: "v2"
-  seed: 42
-  versions:
-    v1:
-      countries: 80
-      cities_per_country: 4
-    v2:
-      countries: 100
-      cities_per_country: 5
-  system_prompts:
-    - "Ты — справочник по мировой географии. Отвечай по-русски точно и кратко."
-    - "Помоги проверить знание географии: дай прямой ответ без лишних рассуждений."
-    - "Отвечай на географические вопросы, опираясь только на приведённый факт."
-    - "Ты помогаешь готовиться к викторине по географии. Ответь одним предложением."
-    - "Дай лаконичный и фактологичный ответ на вопрос о городе мира."
-
-clean:
-  min_user_chars: 30
-  max_user_chars: 1000
-  min_assistant_chars: 2
-  near_dup:
-    enabled: true
-    shingle_words: 4
-    num_perm: 64
-    threshold: 0.85
-  pii:
-    enabled: true
-
-diversity:
-  min_examples: 1000
-  min_system_prompts: 3
-  min_groups: 50
-  max_group_share: 0.10
-  min_answer_len_ratio: 1.6
-  max_same_length_share: 0.25
-  max_duplicate_answer_share: 0.30
-
-split:
-  group_key: "topic"
-  ratios:
-    train: 0.8
-    val: 0.1
-    test: 0.1
-  seed: 42
-
-contamination:
-  threshold: 0.85
-
-paths:
-  raw: "data/raw.jsonl"
-  clean: "data/clean.jsonl"
-  train: "data/train.jsonl"
-  val: "data/val.jsonl"
-  test: "data/test.jsonl"
-  metrics_collect: "metrics/collect.json"
-  metrics_clean: "metrics/clean.json"
-  metrics_split: "metrics/split.json"
-  metrics_diversity: "metrics/diversity.json"
-  datasheet: "docs/datasheet.md"
-  models: "models"
-  metrics: "metrics"
-  curves: "docs/curves.png"
-  compare: "docs/compare.md"
+    - "В какой стране находится город Dar es Salaam?"
+    - "Назови часовой пояс города Dar es Salaam."

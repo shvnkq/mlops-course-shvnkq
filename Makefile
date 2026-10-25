@@ -1,63 +1,38 @@
-.PHONY: install repro v1 v2 diff dag diversity contamination tokenize train train-all train-freeze plot compare check check-hw3 report clean
-.NOTPARALLEL: train
-
-ifeq ($(OS),Windows_NT)
-CHECK_BASH := "$(shell git --exec-path)/../../../bin/bash.exe"
-else
-CHECK_BASH := bash
-endif
-
+.PHONY: install up down sweep promote predict check check-storage
 install:
-	uv sync
-
-repro:
-	uv run dvc repro
-
-v1:
-	uv run python scripts/set_version.py v1
-	uv run dvc repro
-
-v2:
-	uv run python scripts/set_version.py v2
-	uv run dvc repro
-
-diff:
-	uv run dvc metrics diff
-
-dag:
-	uv run dvc dag
-
-diversity:
-	uv run python -m src.diversity
-
-contamination:
-	uv run python scripts/check_contamination.py
-
-tokenize:
-	uv run python -X utf8 -m src.tokenize_data
-
-train: train-all train-freeze plot
-
-train-all:
-	uv run python -u -X utf8 -m src.train --variant all_layers
-
-train-freeze:
-	uv run python -u -X utf8 -m src.train --variant freeze14
-
-plot:
-	uv run python -X utf8 -m src.plot
-
-compare:
-	uv run python -X utf8 -m src.compare --variant all_layers
-
+	uv sync --frozen
+up:
+	docker compose -p mlops-hw6 up --build -d --wait
+down:
+	docker compose -p mlops-hw6 down
+sweep:
+	uv run python -m src.sweep
+promote:
+	uv run python -m evaluation.cli promote
+predict:
+	uv run python -m src.predict --uri models:/my-qwen-adapter@champion --prompt "Какой показатель отражает запасы железа?"
 check:
-	uv run python -X utf8 scripts/run_check.py
+	bash tests/check.sh
+check-storage:
+	uv run python tests/check_storage.py
 
-check-hw3:
-	uv run python -X utf8 scripts/run_check.py --script tests/check_hw3.sh
-
+.PHONY: report candidate baseline-init evaluate eval check-eval check-negative check-all baseline-update predict-candidate
 report:
-	uv run python -X utf8 -m scripts.report_hw5
-
-clean:
-	uv run python -X utf8 scripts/clean_hw5.py
+	uv run python -m src.report
+candidate:
+	uv run python -m evaluation.cli candidate
+baseline-init:
+	uv run python -m evaluation.cli baseline-init
+evaluate:
+	uv run python -m evaluation.cli evaluate
+eval:
+	uv run python -m evaluation.cli gate
+check-eval:
+	uv run python -m unittest discover -s tests -p 'test_*.py' -v
+check-negative:
+	uv run python -m evaluation.cli negative
+check-all: check check-eval
+baseline-update:
+	uv run python -m evaluation.cli baseline-update
+predict-candidate:
+	uv run python -m src.predict --uri models:/my-qwen-adapter@candidate --prompt "Выберите правильный вариант."

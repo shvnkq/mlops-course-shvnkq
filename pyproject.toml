@@ -1,20 +1,9 @@
 [project]
-name = "mlops-hw5"
+name = "mlops-hw67"
 version = "0.1.0"
-description = "MLOPS-26, домашняя работа 5: обучение LoRA на собственном датасете"
-requires-python = ">=3.12,<3.13"
-# Нижние границы, а не «любая версия»: pydantic v1 и v2 несовместимы по API,
-# а dvc до 3.x иначе называет команды. Без границ ДЗ ломается у соседа.
+requires-python = ">=3.12,<3.14"
 dependencies = [
-    "dvc>=3.55",
-    "geonamescache==3.0.2",
-    "pydantic>=2.9",
-    "datasketch>=1.6",
-    "pyyaml>=6.0",
-    "torch>=2.5",
-    "transformers>=4.51,<5",
-    "numpy>=2.1",
-    "peft>=0.14,<0.19",
-    "matplotlib>=3.9",
-    "psutil>=5.9",
+  "mlflow==2.22.2", "torch==2.14.0", "transformers==5.17.0",
+  "peft==0.21.0", "pyyaml>=6,<7", "psutil>=5.9,<8", "numpy>=2,<3", "SQLAlchemy==2.0.43",
+  "dvc>=3.55,<4", "geonamescache==3.0.2",
 ]
