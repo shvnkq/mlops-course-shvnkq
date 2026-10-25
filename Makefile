@@ -10,7 +10,7 @@ sweep:
 promote:
 	uv run python -m evaluation.cli promote
 predict:
-	uv run python -m src.predict --uri models:/my-qwen-adapter@champion --prompt "Какой показатель отражает запасы железа?"
+	uv run python -m src.predict --uri models:/geonames-qwen-adapter@champion --prompt "В какой стране находится город Dar es Salaam?"
 check:
 	bash tests/check.sh
 check-storage:
@@ -35,4 +35,12 @@ check-all: check check-eval
 baseline-update:
 	uv run python -m evaluation.cli baseline-update
 predict-candidate:
-	uv run python -m src.predict --uri models:/my-qwen-adapter@candidate --prompt "Выберите правильный вариант."
+	uv run python -m src.predict --uri models:/geonames-qwen-adapter@candidate --prompt "В какой стране находится город Dar es Salaam?"
+
+.PHONY: eval-data conclusion package
+eval-data:
+	uv run --frozen python -m scripts.prepare_eval
+conclusion:
+	uv run --frozen python -m scripts.conclude_hw67
+package:
+	uv run --frozen python -m scripts.package_hw67

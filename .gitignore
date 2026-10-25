@@ -11,6 +11,7 @@ mlruns/
 mlartifacts/
 .DS_Store
 *.log
+submission/
 *.bak
 *.orig
 ~$*
