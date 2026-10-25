@@ -136,6 +136,11 @@ def quality_gate(baseline, candidate, critical_slices):
         for report in (baseline, candidate):
             if report.get('status') != 'complete' or not isinstance(report.get('model'), dict) or not report['model'].get('kind'):
                 raise ValueError('Incomplete report or model identity')
+            model = report['model']
+            if model['kind'] == 'base' and (not model.get('name') or not isinstance(model.get('revision'), str) or len(model['revision']) != 40):
+                raise ValueError('Base model needs a name and exact revision')
+            if model['kind'] == 'adapter' and any(not model.get(k) for k in ('name', 'version', 'run_id', 'uri')):
+                raise ValueError('Adapter needs a concrete registry version and run')
         a = _validate_report(baseline, 'baseline', 50)
         b = _validate_report(candidate, 'candidate', 50)
         if a.keys() != b.keys() or baseline['slices'].keys() != candidate['slices'].keys() or len(baseline['slices']) < 3:
