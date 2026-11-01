@@ -1,0 +1,44 @@
+{
+  "artifact_uri": "models:/geonames-qwen-adapter/1",
+  "evaluation_sources": {
+    "metrics/baseline-eval.json": "88a407f628da45fcd3b17fdbdf0b00cbef0e9612f466275b2862d3227b3fab50",
+    "metrics/baseline-outputs.json": "e2cbf3caa5a6f85f00f66067d61e919dc7d6aa1ec801ba8f62b35778450f27a0",
+    "metrics/candidate-eval.json": "bfe83da18a6086eabb35759801b054d8cc6d191f730f124b9004058d4b2ff8c0",
+    "metrics/candidate-outputs.json": "497feeace1027d215de5085482ea600c3d4535d5d3e970d091e525421606d465"
+  },
+  "file_hashes": {
+    "adapter/README.md": "6f2723201f761fbea8933f9a41ec49cd0d30ce753731a4fde634a7550fe50550",
+    "adapter/adapter_config.json": "9dc573ecd4e2271c340bf28e9a2ee8d7795e10faab9163cacce6364bcb299763",
+    "adapter/adapter_model.safetensors": "1d66988be89ddf2ab79b87d23f6c49fb52368d00d3cbaac246ba5511abe1e6bd",
+    "adapter/chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "adapter/manifest.json": "5c01ba068f97f3834c49d961d90cbf3ba3b92291ceeb96c2d373940fba035f75",
+    "adapter/tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+    "adapter/tokenizer_config.json": "c4f4c62b741ab2940841480f9942f378d7d3878d47c2babb862af7381c59b952"
+  },
+  "golden_sha256": "9aa86577cc91be6b10d206da82f7c29db460691102ea2bb5ed8d1f80a977b7d6",
+  "model_id": "dbbef824856a45c9a784bb046d21113a",
+  "model_sha256": "c7ac2b421de1ce2afa08b988883441109505a1c549f9c95ea035f119f505f998",
+  "protocol_sha256": "f270ae6f818c0aa7db5f508c79dcbcfcffe0508a51d836eaa3394f0976a0c625",
+  "provenance_note": "Existing accepted HW67 training result; no new training or generation protocol change",
+  "runtime": {
+    "base_name": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "device": "mps",
+    "dtype": "bfloat16",
+    "generation": {
+      "do_sample": false,
+      "enable_thinking": false,
+      "max_new_tokens": 32,
+      "seed": 42,
+      "system": "Реши задачу выбора варианта. Верни только JSON с единственным полем answer и строковой меткой из choices, указанных в вопросе. На запрос за пределами географии верни {\"answer\":\"REFUSE\"}."
+    },
+    "peft": "0.21.0",
+    "template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "tokenizer_sha256": "515a4e042e65e68ed0943e5eabead9298766d38c2181677ccf2ec27470620a99",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "runtime_sha256": "45167ab6e8563be18c86539eab3c6913e83562b32555712055a5b60a13fc3819",
+  "schema_version": 1,
+  "training_run_id": "dbbef824856a45c9a784bb046d21113a"
+}

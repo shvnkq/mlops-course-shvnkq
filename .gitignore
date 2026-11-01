@@ -12,6 +12,9 @@ mlartifacts/
 .DS_Store
 *.log
 submission/
+hw8910/state/
+hw8910/state-*/
+hw8910/artifacts/
 *.bak
 *.orig
 ~$*

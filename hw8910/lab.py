@@ -6,6 +6,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import release
 
@@ -66,9 +67,15 @@ def run(root,report_name,fail_after_prepare=False):
     prepared=prepare(root)
     if fail_after_prepare:raise RuntimeError('Инъекция сбоя после подготовки')
     manifest=read(root/'manifest-B.json');report=read(root/report_name)
+    release.verify_files(manifest,root)
     release.publish(manifest,report,root/'accepted.json')
-    with (root/'publications.jsonl').open('a') as f:
-        f.write(json.dumps({'model_id':manifest['model_id'],'prepared':prepared['input_sha256']})+'\n')
+    if os.environ.get('HW8910_FAIL_AFTER_POINTER'): raise RuntimeError('Fault after pointer, before journal')
+    record={'release_id':release.digest({'manifest':manifest,'report':report}),'model_id':manifest['model_id'],'prepared':prepared['input_sha256']}
+    journal=root/'publications.jsonl'
+    existing=[json.loads(x) for x in journal.read_text().splitlines()] if journal.exists() else []
+    if not any(x['release_id']==record['release_id'] for x in existing):
+        with journal.open('a') as f:
+            f.write(json.dumps(record)+'\n');f.flush();os.fsync(f.fileno())
     print('PUBLISHED',manifest['model_id'])
 
 

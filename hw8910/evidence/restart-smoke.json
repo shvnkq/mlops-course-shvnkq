@@ -1,0 +1,67 @@
+{
+  "previous_pid": 55734,
+  "current_pid": 55821,
+  "before": [
+    200,
+    {
+      "answer": "{\n  \"answer\": \"A\"\n}",
+      "output_tokens": 10,
+      "model_id": "dbbef824856a45c9a784bb046d21113a",
+      "runtime_sha256": "45167ab6e8563be18c86539eab3c6913e83562b32555712055a5b60a13fc3819",
+      "request_id": "a1649b14-b6f0-45a7-a620-53227ecfe796",
+      "generation_seconds": 0.37976966600399464,
+      "queue_seconds": 2.167013008147478e-06,
+      "total_seconds": 0.3797997920191847
+    }
+  ],
+  "after": [
+    200,
+    {
+      "answer": "{\n  \"answer\": \"A\"\n}",
+      "output_tokens": 10,
+      "model_id": "dbbef824856a45c9a784bb046d21113a",
+      "runtime_sha256": "45167ab6e8563be18c86539eab3c6913e83562b32555712055a5b60a13fc3819",
+      "request_id": "183c5312-f5dc-4f72-bcf1-612e772f863a",
+      "generation_seconds": 0.3692193330498412,
+      "queue_seconds": 2.541986759752035e-06,
+      "total_seconds": 0.3693039169884287
+    }
+  ],
+  "readiness": [
+    [
+      503,
+      {
+        "ready": false,
+        "error": null
+      }
+    ],
+    [
+      503,
+      {
+        "ready": false,
+        "error": null
+      }
+    ],
+    [
+      503,
+      {
+        "ready": false,
+        "error": null
+      }
+    ],
+    [
+      503,
+      {
+        "ready": false,
+        "error": null
+      }
+    ],
+    [
+      200,
+      {
+        "ready": true,
+        "error": null
+      }
+    ]
+  ]
+}

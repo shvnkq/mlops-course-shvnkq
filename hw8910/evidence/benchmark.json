@@ -1,0 +1,24 @@
+[
+  {
+    "concurrency": 1,
+    "n": 8,
+    "success": 8,
+    "errors": 0,
+    "batch_seconds": 2.861474042001646,
+    "successful_requests_per_second": 2.7957618634918227,
+    "mean_success_latency": 0.3572636511307792,
+    "max_success_latency": 0.4079179590335116,
+    "error_latencies": []
+  },
+  {
+    "concurrency": 2,
+    "n": 8,
+    "success": 8,
+    "errors": 0,
+    "batch_seconds": 3.044183125020936,
+    "successful_requests_per_second": 2.627962797062342,
+    "mean_success_latency": 0.7129333645061706,
+    "max_success_latency": 0.8360249160323292,
+    "error_latencies": []
+  }
+]

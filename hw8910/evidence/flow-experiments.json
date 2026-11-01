@@ -1,0 +1,60 @@
+[
+  {
+    "experiment": "flow-repeat",
+    "args": [],
+    "exit_code": 0,
+    "cached": true,
+    "prepared": false
+  },
+  {
+    "experiment": "flow-probe-initial",
+    "args": [
+      "--data",
+      "hw8910/state/preparation-probe.jsonl"
+    ],
+    "exit_code": 0,
+    "cached": true,
+    "prepared": false
+  },
+  {
+    "experiment": "flow-input-changed",
+    "args": [
+      "--data",
+      "hw8910/state/preparation-probe.jsonl"
+    ],
+    "exit_code": 0,
+    "cached": false,
+    "prepared": true
+  },
+  {
+    "experiment": "flow-pointer-crash",
+    "args": [
+      "--root",
+      "hw8910/state-recovery",
+      "--fail-after-pointer"
+    ],
+    "exit_code": 1,
+    "cached": true,
+    "prepared": false
+  },
+  {
+    "experiment": "flow-pointer-repair",
+    "args": [
+      "--root",
+      "hw8910/state-recovery"
+    ],
+    "exit_code": 0,
+    "cached": true,
+    "prepared": false
+  },
+  {
+    "experiment": "flow-pointer-repeat",
+    "args": [
+      "--root",
+      "hw8910/state-recovery"
+    ],
+    "exit_code": 0,
+    "cached": true,
+    "prepared": false
+  }
+]

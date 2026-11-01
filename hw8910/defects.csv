@@ -1,8 +1,8 @@
-id,symptom,reproduce,expected,observed,root_cause,fix_commit,regression_test,before_log,after_log
-1,,,,,,,,,
-2,,,,,,,,,
-3,,,,,,,,,
-4,,,,,,,,,
-5,,,,,,,,,
-6,,,,,,,,,
-7,,,,,,,,,
+symptom,reproduce,actual_expected,cause,fix,regression_test
+Stale preparation,"run fail, recover, change input",old CACHE_HIT / expected PREPARED,path-only key,content/config canonical hash,test_process_recovery_and_changed_input
+Incomplete/foreign PASS,run --report report-incomplete.json,old exit 0 / expected refusal,truthy passed without binding,complete boolean finite bound contract,test_process_reject_and_incompatible
+Pointer overwritten on disk failure,mock os.replace failure,old writes target / expected unchanged bytes,in-place write,temp + flush/fsync + os.replace + cleanup,test_failed_atomic_replace_preserves_previous_bytes
+Duplicate release events,run twice in new processes,old 2 events / expected 1,unconditional append,canonical release id and recovery reconciliation,test_process_repeat_has_one_publication
+Ready before warmup,GET /ready during warmup,old 200 / expected 503,ready initialized true,ready only after backend load and warmup,test_http_readiness
+Advertised B while A in memory,publish B after API started A,"old metadata B, answer A / expected both A",reread pointer on every response,immutable loaded backend identity,test_http_actual_loaded_version_and_rollback
+Invalid input computes,POST invalid limits then /debug,"old calls grow / expected 4xx, unchanged calls",backend called before validation,strict prompt/limit before lock/backend,test_http_validation_never_calls_backend

@@ -1,0 +1,24 @@
+{
+  "model_id": "dbbef824856a45c9a784bb046d21113a",
+  "model_sha256": "c7ac2b421de1ce2afa08b988883441109505a1c549f9c95ea035f119f505f998",
+  "protocol_sha256": "f270ae6f818c0aa7db5f508c79dcbcfcffe0508a51d836eaa3394f0976a0c625",
+  "golden_sha256": "9aa86577cc91be6b10d206da82f7c29db460691102ea2bb5ed8d1f80a977b7d6",
+  "runtime_sha256": "45167ab6e8563be18c86539eab3c6913e83562b32555712055a5b60a13fc3819",
+  "status": "complete",
+  "passed": true,
+  "evaluation_run_id": "ce237897c74149238a6afd2e2789156d",
+  "metrics": {
+    "n": 60,
+    "correct": 35,
+    "valid": 35,
+    "errors": 0,
+    "accuracy": 0.5833333333333334,
+    "format_rate": 0.5833333333333334
+  },
+  "sources": {
+    "metrics/baseline-eval.json": "88a407f628da45fcd3b17fdbdf0b00cbef0e9612f466275b2862d3227b3fab50",
+    "metrics/candidate-eval.json": "bfe83da18a6086eabb35759801b054d8cc6d191f730f124b9004058d4b2ff8c0",
+    "metrics/baseline-outputs.json": "e2cbf3caa5a6f85f00f66067d61e919dc7d6aa1ec801ba8f62b35778450f27a0",
+    "metrics/candidate-outputs.json": "497feeace1027d215de5085482ea600c3d4535d5d3e970d091e525421606d465"
+  }
+}

@@ -44,3 +44,11 @@ conclusion:
 	uv run --frozen python -m scripts.conclude_hw67
 package:
 	uv run --frozen python -m scripts.package_hw67
+
+.PHONY: check-hw8910 serve-hw8910 release-hw8910
+check-hw8910:
+	cd hw8910 && ../.venv/bin/python -m unittest discover -s tests -v
+serve-hw8910:
+	uv run --frozen python hw8910/api.py
+release-hw8910:
+	uv run --frozen python hw8910/flow.py

@@ -1,0 +1,22 @@
+[
+  {
+    "case": "incomplete",
+    "before_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f",
+    "after_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f"
+  },
+  {
+    "case": "wrong-model",
+    "before_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f",
+    "after_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f"
+  },
+  {
+    "case": "reject",
+    "before_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f",
+    "after_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f"
+  },
+  {
+    "case": "nan",
+    "before_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f",
+    "after_sha256": "e5255e85ade8178114ed1878a0928c8b49f5a46597186b6a5a1efdd339d7f04f"
+  }
+]
