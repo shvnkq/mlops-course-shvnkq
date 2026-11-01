@@ -1,0 +1,41 @@
+[
+  [
+    200,
+    {
+      "answer": "STUB ONLY: fixture-A",
+      "output_tokens": 1,
+      "model_id": "fixture-A",
+      "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+      "request_id": "f4e99b04-5e72-4327-b4bd-96e29b74b488",
+      "generation_seconds": 0.012508541985880584,
+      "queue_seconds": 1.9160215742886066e-06,
+      "total_seconds": 0.012525083031505346
+    }
+  ],
+  [
+    200,
+    {
+      "answer": "STUB ONLY: fixture-B",
+      "output_tokens": 1,
+      "model_id": "fixture-B",
+      "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+      "request_id": "e92edda8-983f-4b11-a1eb-59b9d8f1768a",
+      "generation_seconds": 0.012511167034972459,
+      "queue_seconds": 1.5409896150231361e-06,
+      "total_seconds": 0.012537500006146729
+    }
+  ],
+  [
+    200,
+    {
+      "answer": "STUB ONLY: fixture-A",
+      "output_tokens": 1,
+      "model_id": "fixture-A",
+      "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+      "request_id": "e9cb5dc7-7c92-4791-a059-96d00240949b",
+      "generation_seconds": 0.012516958988271654,
+      "queue_seconds": 1.4579854905605316e-06,
+      "total_seconds": 0.012557458016090095
+    }
+  ]
+]
