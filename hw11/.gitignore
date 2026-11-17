@@ -1,0 +1,9 @@
+.kubeconfig
+__pycache__/
+.venv/
+replay-results/
+!chart/models/
+!chart/models/*.json
+!results/*.log
+!results/server/*.log
+!results/initial-helm-rollback/*.log

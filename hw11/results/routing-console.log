@@ -1,0 +1,24 @@
+b-even-plain-1 measurement_start {'scheduled_epoch_ns': 1794892680715567000, 'duration_seconds': 120, 'rate': 5}
+b-even-plain-1 measurement_end {'sent': 600, 'ok': 584}
+b-even-affinity-1 measurement_start {'scheduled_epoch_ns': 1794892811546895000, 'duration_seconds': 120, 'rate': 5}
+b-even-affinity-1 measurement_end {'sent': 600, 'ok': 369}
+b-hot-plain-1 measurement_start {'scheduled_epoch_ns': 1794892943056658000, 'duration_seconds': 120, 'rate': 5}
+b-hot-plain-1 measurement_end {'sent': 600, 'ok': 596}
+b-hot-affinity-1 measurement_start {'scheduled_epoch_ns': 1794893074321553000, 'duration_seconds': 120, 'rate': 5}
+b-hot-affinity-1 measurement_end {'sent': 600, 'ok': 443}
+b-even-affinity-2 measurement_start {'scheduled_epoch_ns': 1794893205860152000, 'duration_seconds': 120, 'rate': 5}
+b-even-affinity-2 measurement_end {'sent': 600, 'ok': 600}
+b-even-plain-2 measurement_start {'scheduled_epoch_ns': 1794893336653966000, 'duration_seconds': 120, 'rate': 5}
+b-even-plain-2 measurement_end {'sent': 600, 'ok': 584}
+b-hot-affinity-2 measurement_start {'scheduled_epoch_ns': 1794893467853970000, 'duration_seconds': 120, 'rate': 5}
+b-hot-affinity-2 measurement_end {'sent': 600, 'ok': 445}
+b-hot-plain-2 measurement_start {'scheduled_epoch_ns': 1794893599053025000, 'duration_seconds': 120, 'rate': 5}
+b-hot-plain-2 measurement_end {'sent': 600, 'ok': 597}
+b-even-plain-3 measurement_start {'scheduled_epoch_ns': 1794893730057461000, 'duration_seconds': 120, 'rate': 5}
+b-even-plain-3 measurement_end {'sent': 600, 'ok': 592}
+b-even-affinity-3 measurement_start {'scheduled_epoch_ns': 1794893861358371000, 'duration_seconds': 120, 'rate': 5}
+b-even-affinity-3 measurement_end {'sent': 600, 'ok': 600}
+b-hot-plain-3 measurement_start {'scheduled_epoch_ns': 1794893992457234000, 'duration_seconds': 120, 'rate': 5}
+b-hot-plain-3 measurement_end {'sent': 600, 'ok': 592}
+b-hot-affinity-3 measurement_start {'scheduled_epoch_ns': 1794894123957064000, 'duration_seconds': 120, 'rate': 5}
+b-hot-affinity-3 measurement_end {'sent': 600, 'ok': 449}

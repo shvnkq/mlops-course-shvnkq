@@ -1,4 +1,12 @@
-# MLOPS-26: ДЗ8–10 — безопасный выпуск и API
+# MLOPS-26 · практические работы
+
+## ДЗ11 — Kubernetes под нагрузкой
+
+[Инструкция стенда](hw11/README.md) · [Отчёт HTML](hw11/report.html) ·
+[Сырые замеры](hw11/results/requests.jsonl) ·
+[Видео и комплект сдачи](https://github.com/shvnkq/mlops-course-shvnkq/releases/tag/hw11-v1).
+
+## ДЗ8–10 — безопасный выпуск и API
 
 Текущая работа находится в `hw8910/`. [Отчёт](hw8910/REPORT.md),
 [семь причин и исправлений](hw8910/defects.csv),

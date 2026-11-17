@@ -1,0 +1,201 @@
+{
+  "kind": "PodMetricsList",
+  "apiVersion": "metrics.k8s.io/v1beta1",
+  "metadata": {},
+  "items": [
+    {
+      "metadata": {
+        "name": "client-0",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "run": "client-0"
+        }
+      },
+      "timestamp": "2026-11-17T05:55:04Z",
+      "window": "12.217s",
+      "containers": [
+        {
+          "name": "client-0",
+          "usage": {
+            "cpu": "0",
+            "memory": "4260Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "client-1",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "run": "client-1"
+        }
+      },
+      "timestamp": "2026-11-17T05:55:11Z",
+      "window": "22.644s",
+      "containers": [
+        {
+          "name": "client-1",
+          "usage": {
+            "cpu": "0",
+            "memory": "4252Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "client-2",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "run": "client-2"
+        }
+      },
+      "timestamp": "2026-11-17T05:55:11Z",
+      "window": "16.035s",
+      "containers": [
+        {
+          "name": "client-2",
+          "usage": {
+            "cpu": "0",
+            "memory": "4252Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "client-3",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "run": "client-3"
+        }
+      },
+      "timestamp": "2026-11-17T05:54:58Z",
+      "window": "18.391s",
+      "containers": [
+        {
+          "name": "client-3",
+          "usage": {
+            "cpu": "0",
+            "memory": "4260Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "grafana-656978bb7d-t6r4n",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "app": "grafana",
+          "pod-template-hash": "656978bb7d"
+        }
+      },
+      "timestamp": "2026-11-17T05:55:04Z",
+      "window": "18.069s",
+      "containers": [
+        {
+          "name": "grafana",
+          "usage": {
+            "cpu": "2225911n",
+            "memory": "120472Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "inference-7d85f8b8df-kh2bt",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "app": "inference",
+          "pod-template-hash": "7d85f8b8df"
+        }
+      },
+      "timestamp": "2026-11-17T05:55:11Z",
+      "window": "32.628s",
+      "containers": [
+        {
+          "name": "api",
+          "usage": {
+            "cpu": "4037942n",
+            "memory": "34976Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "inference-7d85f8b8df-ntzzq",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "app": "inference",
+          "pod-template-hash": "7d85f8b8df"
+        }
+      },
+      "timestamp": "2026-11-17T05:54:55Z",
+      "window": "19.15s",
+      "containers": [
+        {
+          "name": "api",
+          "usage": {
+            "cpu": "4217650n",
+            "memory": "34972Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "kube-state-f88956674-fj7km",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "app": "kube-state",
+          "pod-template-hash": "f88956674"
+        }
+      },
+      "timestamp": "2026-11-17T05:55:02Z",
+      "window": "18.702s",
+      "containers": [
+        {
+          "name": "metrics",
+          "usage": {
+            "cpu": "715698n",
+            "memory": "8160Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "prometheus-568df7d975-r5gxp",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T05:55:23Z",
+        "labels": {
+          "app": "prometheus",
+          "pod-template-hash": "568df7d975"
+        }
+      },
+      "timestamp": "2026-11-17T05:54:55Z",
+      "window": "16.6s",
+      "containers": [
+        {
+          "name": "prometheus",
+          "usage": {
+            "cpu": "2053674n",
+            "memory": "35484Ki"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata: {name: observer}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata: {name: pod-discovery}
+rules:
+  - apiGroups: [""]
+    resources: [pods]
+    verbs: [get, list, watch]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: {name: pod-discovery}
+subjects: [{kind: ServiceAccount, name: observer}]
+roleRef: {kind: Role, name: pod-discovery, apiGroup: rbac.authorization.k8s.io}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: kube-state}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: kube-state}}
+  template:
+    metadata: {labels: {app: kube-state}}
+    spec:
+      serviceAccountName: observer
+      containers:
+        - name: metrics
+          image: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0@sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb
+          args: ['--namespaces=hw11', '--resources=pods', '--metric-allowlist=kube_pod_status_ready']
+          ports: [{containerPort: 8080}]
+          resources:
+            requests: {cpu: 20m, memory: 40Mi}
+            limits: {cpu: 150m, memory: 100Mi}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: kube-state}
+spec:
+  selector: {app: kube-state}
+  ports: [{port: 8080}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: prometheus}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: prometheus}}
+  template:
+    metadata: {labels: {app: prometheus}}
+    spec:
+      serviceAccountName: observer
+      securityContext: {fsGroup: 65534}
+      containers:
+        - name: prometheus
+          image: prom/prometheus:v3.3.1@sha256:e2b8aa62b64855956e3ec1e18b4f9387fb6203174a4471936f4662f437f04405
+          args: ['--config.file=/etc/lab/prometheus.yml', '--storage.tsdb.path=/prometheus', '--storage.tsdb.retention.time=6h', '--storage.tsdb.retention.size=96MB']
+          ports: [{containerPort: 9090}]
+          resources:
+            requests: {cpu: 50m, memory: 100Mi, ephemeral-storage: 32Mi}
+            limits: {cpu: 400m, memory: 300Mi, ephemeral-storage: 280Mi}
+          volumeMounts:
+            - {name: config, mountPath: /etc/lab, readOnly: true}
+            - {name: data, mountPath: /prometheus}
+      volumes:
+        - {name: config, configMap: {name: prometheus-config}}
+        - {name: data, emptyDir: {sizeLimit: 256Mi}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: prometheus}
+spec:
+  selector: {app: prometheus}
+  ports: [{port: 9090}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: grafana}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: grafana}}
+  template:
+    metadata: {labels: {app: grafana}}
+    spec:
+      automountServiceAccountToken: false
+      securityContext: {fsGroup: 472}
+      containers:
+        - name: grafana
+          image: grafana/grafana:11.6.1@sha256:52c3e20686b860c6dc1f623811565773cf51eefa378817a4896dfc863c3c82c8
+          env:
+            - {name: GF_AUTH_ANONYMOUS_ENABLED, value: "true"}
+            - {name: GF_AUTH_ANONYMOUS_ORG_ROLE, value: Viewer}
+            - {name: GF_AUTH_DISABLE_LOGIN_FORM, value: "true"}
+            - {name: GF_ANALYTICS_REPORTING_ENABLED, value: "false"}
+            - {name: GF_ANALYTICS_CHECK_FOR_UPDATES, value: "false"}
+          ports: [{containerPort: 3000}]
+          resources:
+            requests: {cpu: 40m, memory: 120Mi, ephemeral-storage: 16Mi}
+            limits: {cpu: 350m, memory: 320Mi, ephemeral-storage: 120Mi}
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/grafana}
+            - {name: provisioning, mountPath: /etc/grafana/provisioning/datasources/datasource.yml, subPath: datasource.yml}
+            - {name: provisioning, mountPath: /etc/grafana/provisioning/dashboards/provider.yml, subPath: provider.yml}
+            - {name: dashboard, mountPath: /var/lib/grafana/dashboards, readOnly: true}
+      volumes:
+        - {name: data, emptyDir: {sizeLimit: 96Mi}}
+        - {name: provisioning, configMap: {name: grafana-config}}
+        - {name: dashboard, configMap: {name: grafana-dashboard}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: grafana}
+spec:
+  selector: {app: grafana}
+  ports: [{port: 3000}]

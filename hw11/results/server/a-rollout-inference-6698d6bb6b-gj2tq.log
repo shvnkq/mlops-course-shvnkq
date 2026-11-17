@@ -1,0 +1,8 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+{"ts": 1794894371.581097, "event": "warmup_started", "pod": "inference-6698d6bb6b-gj2tq", "configured_version": "B"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+{"ts": 1794894391.5818782, "event": "warmup_finished", "pod": "inference-6698d6bb6b-gj2tq", "configured_version": "B", "loaded_version": "B", "sha256": "1cbb94f1fe41491511d8ab6898934aa2e0605e562a038117d1c06fc5c250f9f7"}
+{"ts": 1794894396.832511, "event": "received", "pod": "inference-6698d6bb6b-gj2tq", "configured_version": "B", "request_id": "a-rollout-0026", "model_id": "B", "runtime_sha256": "1cbb94f1fe41491511d8ab6898934aa2e0605e562a038117d1c06fc5c250f9f7", "backend_mode": "simulated", "warmed": true, "session_id": "client-2", "client_ip": "10.244.0.14", "running": 0, "waiting": 0}
+{"ts": 1794894397.4073403, "event": "finished", "pod": "inference-6698d6bb6b-gj2tq", "configured_version": "B", "request_id": "a-rollout-0026", "model_id": "B", "runtime_sha256": "1cbb94f1fe41491511d8ab6898934aa2e0605e562a038117d1c06fc5c250f9f7", "backend_mode": "simulated", "warmed": true, "session_id": "client-2", "client_ip": "10.244.0.14", "outcome": "ok", "status": 200, "chunks": 3}

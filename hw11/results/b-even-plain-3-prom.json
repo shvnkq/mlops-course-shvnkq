@@ -1,0 +1,3675 @@
+{
+  "before": {
+    "hw11_ttfc_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "583"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "620"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "801"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "958"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1131"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1247"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1433"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1685"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1886"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1945"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.1,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "641"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "662"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "869"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "1006"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "1169"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "1280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "1420"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "1759"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2141"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2255"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.1,
+          "2268"
+        ]
+      }
+    ],
+    "hw11_response_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "650"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "891"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1098"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1323"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1492"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1827"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1944"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.104,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "687"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "934"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "1141"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "1343"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "1465"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2031"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2253"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2267"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.104,
+          "2268"
+        ]
+      }
+    ],
+    "hw11_queue_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "624"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "661"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "682"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "725"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "924"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "992"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1096"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1143"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1270"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1353"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1435"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1670"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1877"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1946"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.107,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "671"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "719"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "728"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "766"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "987"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1036"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1144"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1182"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1293"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1372"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1426"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "1734"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2111"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2258"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2267"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.107,
+          "2268"
+        ]
+      }
+    ],
+    "hw11_requests_total": [
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "ok",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.11,
+          "1950"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "rejected",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.11,
+          "176"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "unavailable",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.11,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "aborted",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893728.11,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "ok",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.11,
+          "2268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "rejected",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.11,
+          "406"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "unavailable",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.11,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "aborted",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893728.11,
+          "0"
+        ]
+      }
+    ]
+  },
+  "after": {
+    "hw11_ttfc_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "669"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "714"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "938"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "1128"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "1322"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "1466"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "1698"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "1977"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2184"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2245"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.72,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "725"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "747"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "987"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "1155"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "1351"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "1487"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "1671"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2040"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2430"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2546"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_ttfc_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.72,
+          "2559"
+        ]
+      }
+    ],
+    "hw11_response_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "745"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "1049"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "1284"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "1566"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "1768"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2125"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2243"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.726,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "774"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "1062"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "1311"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "1563"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "1730"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2317"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2544"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2558"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_response_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.726,
+          "2559"
+        ]
+      }
+    ],
+    "hw11_queue_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "700"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "751"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "778"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "826"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1086"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1162"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1285"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1342"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1493"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1602"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1703"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "1959"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2176"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2246"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.73,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.01",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "758"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.025",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "813"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.05",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "823"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.1",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "863"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.15",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1126"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.2",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1180"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1315"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.3",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1361"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.4",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1502"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1605"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.6",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "1682"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "0.8",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2013"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2399"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.25",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2549"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "1.5",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2558"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "2.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "3.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "5.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "10.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "15.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "25.0",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_queue_seconds_bucket",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "le": "+Inf",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.73,
+          "2559"
+        ]
+      }
+    ],
+    "hw11_requests_total": [
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "ok",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.734,
+          "2251"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "rejected",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.734,
+          "179"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "unavailable",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.734,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.11:8080",
+          "job": "inference",
+          "outcome": "aborted",
+          "pod": "inference-7d85f8b8df-drdtl"
+        },
+        "value": [
+          1794893854.734,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "ok",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.734,
+          "2559"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "rejected",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.734,
+          "411"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "unavailable",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.734,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "hw11_requests_total",
+          "instance": "10.244.0.10:8080",
+          "job": "inference",
+          "outcome": "aborted",
+          "pod": "inference-7d85f8b8df-8rjt6"
+        },
+        "value": [
+          1794893854.734,
+          "0"
+        ]
+      }
+    ]
+  },
+  "planned_start": 1794893730.057461,
+  "observed_end": 1794893850.6831431,
+  "query_at": 1794893854.658901,
+  "promql": "histogram_quantile(0.95, sum by (le) (increase(hw11_ttfc_seconds_bucket[127s])))",
+  "quantile": [
+    {
+      "metric": {},
+      "value": [
+        1794893854.659,
+        "0.9628070175438594"
+      ]
+    }
+  ]
+}

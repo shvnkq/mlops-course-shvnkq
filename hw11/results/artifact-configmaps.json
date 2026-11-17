@@ -1,0 +1,54 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "data": {
+                "model.json": "{\"version\":\"A\",\"response\":\"Ответ имитатора A\"}\n"
+            },
+            "immutable": true,
+            "kind": "ConfigMap",
+            "metadata": {
+                "annotations": {
+                    "meta.helm.sh/release-name": "lab",
+                    "meta.helm.sh/release-namespace": "hw11"
+                },
+                "creationTimestamp": "2026-11-17T05:15:14Z",
+                "labels": {
+                    "app.kubernetes.io/managed-by": "Helm"
+                },
+                "name": "inference-a-cf5e4581",
+                "namespace": "hw11",
+                "resourceVersion": "4377",
+                "uid": "65367f57-4b8a-44e9-899a-44939db73954"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "model.json": "{\"version\":\"B\",\"response\":\"Ответ имитатора B\"}\n"
+            },
+            "immutable": true,
+            "kind": "ConfigMap",
+            "metadata": {
+                "annotations": {
+                    "helm.sh/resource-policy": "keep",
+                    "meta.helm.sh/release-name": "lab",
+                    "meta.helm.sh/release-namespace": "hw11"
+                },
+                "creationTimestamp": "2026-11-17T05:45:47Z",
+                "labels": {
+                    "app.kubernetes.io/managed-by": "Helm"
+                },
+                "name": "inference-b-1cbb94f1",
+                "namespace": "hw11",
+                "resourceVersion": "3716",
+                "uid": "ce9699c3-35c1-40f0-8d77-7323678d6e67"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

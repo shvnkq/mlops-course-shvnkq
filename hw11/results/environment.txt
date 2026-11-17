@@ -1,0 +1,71 @@
+Tue Nov 17 05:15:10 UTC 2026
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   460Gi   107Gi   322Gi    26%    1.1M  3.4G    0%   /System/Volumes/Data
+Client:
+ Version:           29.9.2
+ API version:       1.54 (downgraded from 1.56)
+ Go version:        go1.26.10
+ Git commit:        a82e528
+ Built:             Tue Oct 20 18:43:59 2026
+ OS/Arch:           darwin/arm64
+ Context:           colima-hw11
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          29.5.2
+  API version:      1.54 (minimum version 1.40)
+  Go version:       go1.26.3
+  Git commit:       568f755
+  Built:            Wed May 20 14:39:25 2026
+  OS/Arch:          linux/arm64
+  Experimental:     false
+ containerd:
+  Version:          v2.2.4
+  GitCommit:        193637f7ee8ae5f5aa5248f49e7baa3e6164966e
+ runc:
+  Version:          1.3.5
+  GitCommit:        v1.3.5-0-g488fc13e
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+4 CPUs 5143703552 bytes RAM
+kind v0.27.0 go1.23.6 darwin/arm64
+v3.17.3+ge4da497
+Client Version: v1.32.2
+Kustomize Version: v5.5.0
+Server Version: v1.32.2
+NAME                 STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION      CONTAINER-RUNTIME
+hw11-control-plane   Ready    control-plane   6m15s   v1.32.2   172.18.0.2    <none>        Debian GNU/Linux 12 (bookworm)   6.8.0-117-generic   containerd://2.0.2
+NAME                          READY   STATUS    RESTARTS   AGE     IP            NODE                 NOMINATED NODE   READINESS GATES
+client-0                      1/1     Running   0          2m43s   10.244.0.12   hw11-control-plane   <none>           <none>
+client-1                      1/1     Running   0          2m43s   10.244.0.13   hw11-control-plane   <none>           <none>
+client-2                      1/1     Running   0          2m43s   10.244.0.14   hw11-control-plane   <none>           <none>
+client-3                      1/1     Running   0          2m43s   10.244.0.15   hw11-control-plane   <none>           <none>
+grafana-656978bb7d-t6r4n      1/1     Running   0          3m6s    10.244.0.7    hw11-control-plane   <none>           <none>
+inference-7d85f8b8df-8rjt6    1/1     Running   0          3m5s    10.244.0.10   hw11-control-plane   <none>           <none>
+inference-7d85f8b8df-drdtl    1/1     Running   0          3m5s    10.244.0.11   hw11-control-plane   <none>           <none>
+kube-state-74cdfc5f4c-2b7v4   0/1     Error     5          3m6s    10.244.0.5    hw11-control-plane   <none>           <none>
+kube-state-f88956674-fj7km    1/1     Running   0          1s      10.244.0.16   hw11-control-plane   <none>           <none>
+prometheus-568df7d975-r5gxp   1/1     Running   0          3m6s    10.244.0.6    hw11-control-plane   <none>           <none>
+POD                                          IMAGE                                                           ID
+client-0                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+client-1                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+client-2                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+client-3                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+grafana-656978bb7d-t6r4n                     grafana/grafana:11.6.1                                          docker.io/grafana/grafana@sha256:52c3e20686b860c6dc1f623811565773cf51eefa378817a4896dfc863c3c82c8
+inference-7d85f8b8df-8rjt6                   hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+inference-7d85f8b8df-drdtl                   hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+kube-state-74cdfc5f4c-2b7v4                  registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0   registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb
+kube-state-f88956674-fj7km                   registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0   registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb
+prometheus-568df7d975-r5gxp                  prom/prometheus:v3.3.1                                          docker.io/prom/prometheus@sha256:e2b8aa62b64855956e3ec1e18b4f9387fb6203174a4471936f4662f437f04405
+coredns-668d6bf9bc-hggpg                     registry.k8s.io/coredns/coredns:v1.11.3                         sha256:2f6c962e7b8311337352d9fdea917da2184d9919f4da7695bc2a6517cf392fe4
+coredns-668d6bf9bc-zxhmm                     registry.k8s.io/coredns/coredns:v1.11.3                         sha256:2f6c962e7b8311337352d9fdea917da2184d9919f4da7695bc2a6517cf392fe4
+etcd-hw11-control-plane                      registry.k8s.io/etcd:3.5.16-0                                   sha256:7fc9d4aa817aa6a3e549f3cd49d1f7b496407be979fc36dd5f356d59ce8c3a82
+kindnet-2zvf2                                docker.io/kindest/kindnetd:v20250214-acbabc1a                   sha256:ee75e27fff91c8d59835f9a3efdf968ff404e580bad69746a65bcf3e304ab26f
+kube-apiserver-hw11-control-plane            registry.k8s.io/kube-apiserver:v1.32.2                          sha256:6417e1437b6d9a789e1ca789695a574e1df00a632bdbfbcae9695c9a7d500e32
+kube-controller-manager-hw11-control-plane   registry.k8s.io/kube-controller-manager:v1.32.2                 sha256:3c9285acfd2ff7915bb451cc40ac060366ac519f3fef00c455f5aca0e0346c4d
+kube-proxy-hvck6                             registry.k8s.io/kube-proxy:v1.32.2                              sha256:e5aac5df76d9b8dc899ab8c4db25a7648e7fb25cafe7a155066247883c78f062
+kube-scheduler-hw11-control-plane            registry.k8s.io/kube-scheduler:v1.32.2                          sha256:82dfa03f692fb5d84f66c17d6ee9126b081182152b25d28ea456d89b7d5d8911
+metrics-server-5b9c7c9b98-9652w              registry.k8s.io/metrics-server/metrics-server:v0.8.0            registry.k8s.io/metrics-server/metrics-server@sha256:89258156d0e9af60403eafd44da9676fd66f600c7934d468ccc17e42b199aee2
+local-path-provisioner-7dc846544d-x4z7g      docker.io/kindest/local-path-provisioner:v20250214-acbabc1a     sha256:653e2348b2d4ab640e418f5eade4c0335d4f648b83ca46a69c96fb382ed26dd2
+hw11-lab:1.0.0 50258810 bytes sha256:730abfc0fab9c42d99231580489d9d1b067d821cfa21e5396e957cbb0aaa3313 ["hw11-lab@sha256:730abfc0fab9c42d99231580489d9d1b067d821cfa21e5396e957cbb0aaa3313"]

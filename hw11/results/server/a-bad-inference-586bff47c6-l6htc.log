@@ -1,0 +1,6 @@
+{"ts": 1794894582.1266859, "event": "warmup_started", "pod": "inference-586bff47c6-l6htc", "configured_version": "B"}
+{"ts": 1794894582.1268063, "event": "warmup_failed", "pod": "inference-586bff47c6-l6htc", "configured_version": "B", "error": "artifact SHA-256 mismatch", "sha256": "1cbb94f1fe41491511d8ab6898934aa2e0605e562a038117d1c06fc5c250f9f7"}
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)

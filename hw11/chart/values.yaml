@@ -1,0 +1,18 @@
+image: hw11-lab:1.0.0
+replicas: 2
+modelVersion: A
+artifactSHAOverride: ""
+warmupSeconds: 20
+earlyReady: false
+slots: 1
+queue: 3
+cacheEntries: 8
+hitSeconds: 0.18
+missSeconds: 0.44
+resources:
+  requests: {cpu: 100m, memory: 80Mi}
+  limits: {cpu: 500m, memory: 192Mi}
+hpa:
+  enabled: false
+  targetCPU: 55
+  downWindow: 45

@@ -1,0 +1,15 @@
+test_01_warmup_defect_and_fix (__main__.LiveEvidence) ... ok
+test_02_rollback_loaded_artifact (__main__.LiveEvidence) ... ok
+test_03_replacement_restores_version_and_context (__main__.LiveEvidence) ... ok
+test_04_classification_rejections_and_aborted_streams (__main__.LiveEvidence) ... ok
+test_05_dialogue_isolation_one_pod (__main__.LiveEvidence) ... ok
+test_06_graceful_rollout (__main__.LiveEvidence) ... ok
+test_07_open_loop_and_repetitions (__main__.LiveEvidence) ... ok
+test_08_histogram_counts_match_client_successes (__main__.LiveEvidence) ... ok
+test_09_autoscaler_and_alert_transitions (__main__.LiveEvidence) ... ok
+test_http_at_cluster_service (__main__.Smoke) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.382s
+
+OK

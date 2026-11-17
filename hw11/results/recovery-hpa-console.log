@@ -1,0 +1,11 @@
+a-bad invalid_B {'expected_sha': 'deliberately-wrong'}
+a-bad rollback {'revision': 9}
+a-kill-stream-1 first_chunk {'pod': 'inference-7d85f8b8df-2ttlq', 'client_ts': 1794894621.4063275}
+a-kill forced_stop {'pod': 'inference-7d85f8b8df-2ttlq', 'container_id': '63ef30e6a09004a928a17c420e8afd5a1edfa06b4d450f083e789ebbed7e8796'}
+a-kill stream_outcome {'outcome': 'aborted'}
+a-kill delete_pod {'pod': 'inference-7d85f8b8df-2ttlq', 'uid': '1c54a2fb-281f-4b24-9396-f63fff3a1448'}
+a-kill replacement_ready {'old': 'inference-7d85f8b8df-2ttlq', 'new': 'inference-7d85f8b8df-lxd4j', 'uid': '93ee56fb-be27-4d2d-b124-7ade20b3ba9f'}
+c-hpa load_start {'rate': 12, 'cpu_ms': 130, 'anchor_rate': 0.5}
+c-hpa load_end {}
+c-hpa hot_load_end {}
+c-hpa returned_to_two {}

@@ -1,0 +1,10 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+{"ts": 1794894650.6520805, "event": "warmup_started", "pod": "inference-7d85f8b8df-lxd4j", "configured_version": "A"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+{"ts": 1794894670.6529899, "event": "warmup_finished", "pod": "inference-7d85f8b8df-lxd4j", "configured_version": "A", "loaded_version": "A", "sha256": "cf5e4581e9d431174bcc10737cc459929f286970d10b65bd3194bc75095bac5f"}
+{"ts": 1794894673.6522279, "event": "received", "pod": "inference-7d85f8b8df-lxd4j", "configured_version": "A", "request_id": "a-dialog-after-1", "model_id": "A", "runtime_sha256": "cf5e4581e9d431174bcc10737cc459929f286970d10b65bd3194bc75095bac5f", "backend_mode": "simulated", "warmed": true, "session_id": "GEONAMES-BETA-392", "client_ip": "10.244.0.13", "running": 0, "waiting": 0}
+{"ts": 1794894673.659192, "event": "received", "pod": "inference-7d85f8b8df-lxd4j", "configured_version": "A", "request_id": "a-dialog-after-0", "model_id": "A", "runtime_sha256": "cf5e4581e9d431174bcc10737cc459929f286970d10b65bd3194bc75095bac5f", "backend_mode": "simulated", "warmed": true, "session_id": "GEONAMES-ALPHA-714", "client_ip": "10.244.0.12", "running": 1, "waiting": 0}
+{"ts": 1794894674.2250063, "event": "finished", "pod": "inference-7d85f8b8df-lxd4j", "configured_version": "A", "request_id": "a-dialog-after-1", "model_id": "A", "runtime_sha256": "cf5e4581e9d431174bcc10737cc459929f286970d10b65bd3194bc75095bac5f", "backend_mode": "simulated", "warmed": true, "session_id": "GEONAMES-BETA-392", "client_ip": "10.244.0.13", "outcome": "ok", "status": 200, "chunks": 3}
+{"ts": 1794894674.5310457, "event": "finished", "pod": "inference-7d85f8b8df-lxd4j", "configured_version": "A", "request_id": "a-dialog-after-0", "model_id": "A", "runtime_sha256": "cf5e4581e9d431174bcc10737cc459929f286970d10b65bd3194bc75095bac5f", "backend_mode": "simulated", "warmed": true, "session_id": "GEONAMES-ALPHA-714", "client_ip": "10.244.0.12", "outcome": "ok", "status": 200, "chunks": 3}

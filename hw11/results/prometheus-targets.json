@@ -1,0 +1,119 @@
+{
+  "activeTargets": [
+    {
+      "discoveredLabels": {
+        "__address__": "10.244.0.10:8080",
+        "__meta_kubernetes_namespace": "hw11",
+        "__meta_kubernetes_pod_container_id": "containerd://d7bdff0109275744955d92fb2218bec1aecf06062dc66476cb4df3d1d9fbfcd0",
+        "__meta_kubernetes_pod_container_image": "hw11-lab:1.0.0",
+        "__meta_kubernetes_pod_container_init": "false",
+        "__meta_kubernetes_pod_container_name": "api",
+        "__meta_kubernetes_pod_container_port_name": "http",
+        "__meta_kubernetes_pod_container_port_number": "8080",
+        "__meta_kubernetes_pod_container_port_protocol": "TCP",
+        "__meta_kubernetes_pod_controller_kind": "ReplicaSet",
+        "__meta_kubernetes_pod_controller_name": "inference-7d85f8b8df",
+        "__meta_kubernetes_pod_host_ip": "172.18.0.2",
+        "__meta_kubernetes_pod_ip": "10.244.0.10",
+        "__meta_kubernetes_pod_label_app": "inference",
+        "__meta_kubernetes_pod_label_pod_template_hash": "7d85f8b8df",
+        "__meta_kubernetes_pod_labelpresent_app": "true",
+        "__meta_kubernetes_pod_labelpresent_pod_template_hash": "true",
+        "__meta_kubernetes_pod_name": "inference-7d85f8b8df-8rjt6",
+        "__meta_kubernetes_pod_node_name": "hw11-control-plane",
+        "__meta_kubernetes_pod_phase": "Running",
+        "__meta_kubernetes_pod_ready": "true",
+        "__meta_kubernetes_pod_uid": "d5c9b47a-6e23-4f7e-9de5-a33b4171e81f",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "3s",
+        "__scrape_timeout__": "3s",
+        "job": "inference"
+      },
+      "labels": {
+        "instance": "10.244.0.10:8080",
+        "job": "inference",
+        "pod": "inference-7d85f8b8df-8rjt6"
+      },
+      "scrapePool": "inference",
+      "scrapeUrl": "http://10.244.0.10:8080/metrics",
+      "globalUrl": "http://10.244.0.10:8080/metrics",
+      "lastError": "",
+      "lastScrape": "2026-11-17T05:44:16.538977544Z",
+      "lastScrapeDuration": 0.001141226,
+      "health": "up",
+      "scrapeInterval": "3s",
+      "scrapeTimeout": "3s"
+    },
+    {
+      "discoveredLabels": {
+        "__address__": "10.244.0.11:8080",
+        "__meta_kubernetes_namespace": "hw11",
+        "__meta_kubernetes_pod_container_id": "containerd://b19dd18f52d40d8534d535f202be1ff2776f6b9b1da06c40b3bb10b221ed30ab",
+        "__meta_kubernetes_pod_container_image": "hw11-lab:1.0.0",
+        "__meta_kubernetes_pod_container_init": "false",
+        "__meta_kubernetes_pod_container_name": "api",
+        "__meta_kubernetes_pod_container_port_name": "http",
+        "__meta_kubernetes_pod_container_port_number": "8080",
+        "__meta_kubernetes_pod_container_port_protocol": "TCP",
+        "__meta_kubernetes_pod_controller_kind": "ReplicaSet",
+        "__meta_kubernetes_pod_controller_name": "inference-7d85f8b8df",
+        "__meta_kubernetes_pod_host_ip": "172.18.0.2",
+        "__meta_kubernetes_pod_ip": "10.244.0.11",
+        "__meta_kubernetes_pod_label_app": "inference",
+        "__meta_kubernetes_pod_label_pod_template_hash": "7d85f8b8df",
+        "__meta_kubernetes_pod_labelpresent_app": "true",
+        "__meta_kubernetes_pod_labelpresent_pod_template_hash": "true",
+        "__meta_kubernetes_pod_name": "inference-7d85f8b8df-drdtl",
+        "__meta_kubernetes_pod_node_name": "hw11-control-plane",
+        "__meta_kubernetes_pod_phase": "Running",
+        "__meta_kubernetes_pod_ready": "true",
+        "__meta_kubernetes_pod_uid": "db69a027-aaff-4890-baf3-87314b25c660",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "3s",
+        "__scrape_timeout__": "3s",
+        "job": "inference"
+      },
+      "labels": {
+        "instance": "10.244.0.11:8080",
+        "job": "inference",
+        "pod": "inference-7d85f8b8df-drdtl"
+      },
+      "scrapePool": "inference",
+      "scrapeUrl": "http://10.244.0.11:8080/metrics",
+      "globalUrl": "http://10.244.0.11:8080/metrics",
+      "lastError": "",
+      "lastScrape": "2026-11-17T05:44:15.896379424Z",
+      "lastScrapeDuration": 0.001655276,
+      "health": "up",
+      "scrapeInterval": "3s",
+      "scrapeTimeout": "3s"
+    },
+    {
+      "discoveredLabels": {
+        "__address__": "kube-state:8080",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "3s",
+        "__scrape_timeout__": "3s",
+        "job": "kube-state"
+      },
+      "labels": {
+        "instance": "kube-state:8080",
+        "job": "kube-state"
+      },
+      "scrapePool": "kube-state",
+      "scrapeUrl": "http://kube-state:8080/metrics",
+      "globalUrl": "http://kube-state:8080/metrics",
+      "lastError": "",
+      "lastScrape": "2026-11-17T05:44:17.201862784Z",
+      "lastScrapeDuration": 0.000471216,
+      "health": "up",
+      "scrapeInterval": "3s",
+      "scrapeTimeout": "3s"
+    }
+  ],
+  "droppedTargets": [],
+  "droppedTargetCounts": null
+}

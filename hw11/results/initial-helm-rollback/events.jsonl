@@ -1,0 +1,2 @@
+{"phase":"a-bad","event":"invalid_B","ts":1794894447.681654,"expected_sha":"deliberately-wrong"}
+{"phase":"a-bad","event":"rollback","ts":1794894471.617793,"revision":6}

@@ -1,0 +1,122 @@
+{{- $file := printf "models/%s.json" .Values.modelVersion -}}
+{{- $model := required "modelVersion missing from chart/models" (.Files.Get $file) -}}
+{{- $sha := $model | sha256sum -}}
+{{- $modelName := printf "inference-%s-%s" (lower .Values.modelVersion) (trunc 8 $sha) -}}
+{{ range $path, $_ := .Files.Glob "models/*.json" -}}
+{{- $content := $.Files.Get $path -}}
+{{- $version := base $path | trimSuffix ".json" -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ printf "inference-%s-%s" (lower $version) (trunc 8 ($content | sha256sum)) }}
+immutable: true
+data:
+  model.json: {{ $content | quote }}
+---
+{{ end -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: inference}
+spec:
+  {{- if not .Values.hpa.enabled }}
+  replicas: {{ .Values.replicas }}
+  {{- end }}
+  minReadySeconds: 2
+  progressDeadlineSeconds: 70
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  selector:
+    matchLabels: {app: inference}
+  template:
+    metadata:
+      labels: {app: inference}
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 35
+      containers:
+        - name: api
+          image: {{ .Values.image | quote }}
+          imagePullPolicy: Never
+          ports: [{name: http, containerPort: 8080}]
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: [ALL]}
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - {name: POD_NAME, valueFrom: {fieldRef: {fieldPath: metadata.name}}}
+            - {name: MODEL_VERSION, value: {{ .Values.modelVersion | quote }}}
+            - {name: MODEL_SHA256, value: {{ default $sha .Values.artifactSHAOverride | quote }}}
+            - {name: WARMUP_SECONDS, value: {{ .Values.warmupSeconds | quote }}}
+            - {name: EARLY_READY, value: {{ .Values.earlyReady | quote }}}
+            - {name: SLOTS, value: {{ .Values.slots | quote }}}
+            - {name: QUEUE, value: {{ .Values.queue | quote }}}
+            - {name: CACHE_SIZE, value: {{ .Values.cacheEntries | quote }}}
+            - {name: HIT_SECONDS, value: {{ .Values.hitSeconds | quote }}}
+            - {name: MISS_SECONDS, value: {{ .Values.missSeconds | quote }}}
+          volumeMounts:
+            - {name: artifact, mountPath: /model, readOnly: true}
+          startupProbe:
+            httpGet: {path: {{ ternary "/health" "/ready" .Values.earlyReady }}, port: http}
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 50
+          readinessProbe:
+            httpGet: {path: {{ ternary "/health" "/ready" .Values.earlyReady }}, port: http}
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 1
+          livenessProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 3
+            timeoutSeconds: 2
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - python
+                  - -c
+                  - "import urllib.request; urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8080/internal/drain', method='POST'), timeout=5).close()"
+      volumes:
+        - name: artifact
+          configMap: {name: {{ $modelName }}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: inference}
+spec:
+  selector: {app: inference}
+  sessionAffinity: None
+  ports: [{port: 8080, targetPort: http, name: http}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: inference-affinity}
+spec:
+  selector: {app: inference}
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP: {timeoutSeconds: 60}
+  ports: [{port: 8080, targetPort: http, name: http}]
+{{- if .Values.hpa.enabled }}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: inference}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: inference}
+  minReplicas: 2
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: {{ .Values.hpa.targetCPU }}}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: {{ .Values.hpa.downWindow }}
+{{- end }}

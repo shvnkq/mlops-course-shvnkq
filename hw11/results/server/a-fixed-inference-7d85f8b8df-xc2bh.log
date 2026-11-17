@@ -1,0 +1,6 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+{"ts": 1794894320.3504918, "event": "warmup_started", "pod": "inference-7d85f8b8df-xc2bh", "configured_version": "A"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+{"ts": 1794894340.3516266, "event": "warmup_finished", "pod": "inference-7d85f8b8df-xc2bh", "configured_version": "A", "loaded_version": "A", "sha256": "cf5e4581e9d431174bcc10737cc459929f286970d10b65bd3194bc75095bac5f"}

@@ -1,0 +1,50 @@
+Client Version: v1.32.2
+Kustomize Version: v5.5.0
+Server Version: v1.32.2
+NAME                 STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION      CONTAINER-RUNTIME
+hw11-control-plane   Ready    control-plane   43m   v1.32.2   172.18.0.2    <none>        Debian GNU/Linux 12 (bookworm)   6.8.0-117-generic   containerd://2.0.2
+NAME                          READY   STATUS    RESTARTS   AGE     IP            NODE                 NOMINATED NODE   READINESS GATES
+client-0                      1/1     Running   0          39m     10.244.0.12   hw11-control-plane   <none>           <none>
+client-1                      1/1     Running   0          39m     10.244.0.13   hw11-control-plane   <none>           <none>
+client-2                      1/1     Running   0          39m     10.244.0.14   hw11-control-plane   <none>           <none>
+client-3                      1/1     Running   0          39m     10.244.0.15   hw11-control-plane   <none>           <none>
+grafana-656978bb7d-t6r4n      1/1     Running   0          40m     10.244.0.7    hw11-control-plane   <none>           <none>
+inference-7d85f8b8df-kh2bt    1/1     Running   0          3m56s   10.244.0.28   hw11-control-plane   <none>           <none>
+inference-7d85f8b8df-ntzzq    1/1     Running   0          8m25s   10.244.0.24   hw11-control-plane   <none>           <none>
+kube-state-f88956674-fj7km    1/1     Running   0          37m     10.244.0.16   hw11-control-plane   <none>           <none>
+prometheus-568df7d975-r5gxp   1/1     Running   0          40m     10.244.0.6    hw11-control-plane   <none>           <none>
+POD                                          IMAGE                                                           ID
+client-0                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+client-1                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+client-2                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+client-3                                     hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+grafana-656978bb7d-t6r4n                     grafana/grafana:11.6.1                                          docker.io/grafana/grafana@sha256:52c3e20686b860c6dc1f623811565773cf51eefa378817a4896dfc863c3c82c8
+inference-7d85f8b8df-kh2bt                   hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+inference-7d85f8b8df-ntzzq                   hw11-lab:1.0.0                                                  sha256:114e4d1615952af0454dc43ca647cb984d26938ec59f3018f78e149e412ad04d
+kube-state-f88956674-fj7km                   registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0   registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb
+prometheus-568df7d975-r5gxp                  prom/prometheus:v3.3.1                                          docker.io/prom/prometheus@sha256:e2b8aa62b64855956e3ec1e18b4f9387fb6203174a4471936f4662f437f04405
+coredns-668d6bf9bc-hggpg                     registry.k8s.io/coredns/coredns:v1.11.3                         sha256:2f6c962e7b8311337352d9fdea917da2184d9919f4da7695bc2a6517cf392fe4
+coredns-668d6bf9bc-zxhmm                     registry.k8s.io/coredns/coredns:v1.11.3                         sha256:2f6c962e7b8311337352d9fdea917da2184d9919f4da7695bc2a6517cf392fe4
+etcd-hw11-control-plane                      registry.k8s.io/etcd:3.5.16-0                                   sha256:7fc9d4aa817aa6a3e549f3cd49d1f7b496407be979fc36dd5f356d59ce8c3a82
+kindnet-2zvf2                                docker.io/kindest/kindnetd:v20250214-acbabc1a                   sha256:ee75e27fff91c8d59835f9a3efdf968ff404e580bad69746a65bcf3e304ab26f
+kube-apiserver-hw11-control-plane            registry.k8s.io/kube-apiserver:v1.32.2                          sha256:6417e1437b6d9a789e1ca789695a574e1df00a632bdbfbcae9695c9a7d500e32
+kube-controller-manager-hw11-control-plane   registry.k8s.io/kube-controller-manager:v1.32.2                 sha256:3c9285acfd2ff7915bb451cc40ac060366ac519f3fef00c455f5aca0e0346c4d
+kube-proxy-hvck6                             registry.k8s.io/kube-proxy:v1.32.2                              sha256:e5aac5df76d9b8dc899ab8c4db25a7648e7fb25cafe7a155066247883c78f062
+kube-scheduler-hw11-control-plane            registry.k8s.io/kube-scheduler:v1.32.2                          sha256:82dfa03f692fb5d84f66c17d6ee9126b081182152b25d28ea456d89b7d5d8911
+metrics-server-5b9c7c9b98-9652w              registry.k8s.io/metrics-server/metrics-server:v0.8.0            registry.k8s.io/metrics-server/metrics-server@sha256:89258156d0e9af60403eafd44da9676fd66f600c7934d468ccc17e42b199aee2
+local-path-provisioner-7dc846544d-x4z7g      docker.io/kindest/local-path-provisioner:v20250214-acbabc1a     sha256:653e2348b2d4ab640e418f5eade4c0335d4f648b83ca46a69c96fb382ed26dd2
+["hw11-lab:1.0.0"] 50258810 bytes sha256:730abfc0fab9c42d99231580489d9d1b067d821cfa21e5396e957cbb0aaa3313 ["hw11-lab@sha256:730abfc0fab9c42d99231580489d9d1b067d821cfa21e5396e957cbb0aaa3313"]
+["kindest/node@sha256:f226345927d7e348497136874b6d207e0b32cc52154ad8323129352923a3142f"] 418154739 bytes sha256:f226345927d7e348497136874b6d207e0b32cc52154ad8323129352923a3142f ["kindest/node@sha256:f226345927d7e348497136874b6d207e0b32cc52154ad8323129352923a3142f"]
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          20G  4.2G   15G  23% /
+2.4G	/var/lib/containerd
+33M	/var/lib/kubelet
+127M	/var/lib/etcd
+1.9M	/var/log/pods
+colima version v0.10.3
+git commit: 00f6c297e92a82c04a4ab507db0a61435650d7e8
+
+runtime: docker
+arch: aarch64
+client: v29.9.2
+server: v29.5.2

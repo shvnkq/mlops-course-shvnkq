@@ -1,0 +1,24 @@
+a-early upgrade {'early_ready': True}
+a-early outcome {'unwarmed': 54}
+a-fixed upgrade {'early_ready': False}
+a-fixed outcome {'unwarmed': 0}
+a-rollout-cross-2 first_chunk {'pod': 'inference-7d85f8b8df-7chxg', 'client_ts': 1794894345.2764552}
+a-rollout upgrade {'target': 'B', 'from_pods': ['inference-7d85f8b8df-7chxg', 'inference-7d85f8b8df-xc2bh']}
+a-rollout outcomes {'ok': 29, 'http_error': 0, 'rejected': 1, 'aborted': 0, 'timeout': 0}
+a-rollout unexpected_outcome {'rows': ['a-rollout-0014']}
+a-bad invalid_B {'expected_sha': 'deliberately-wrong'}
+a-bad rollback {'revision': 6}
+ Error: no ConfigMap with the name "inference-a-cf5e4581" found
+
+Traceback (most recent call last):
+  File "/Users/shvnk/bmstu/mlops/dz11/mlops-course-shvnkq/hw11/experiments.py", line 448, in <module>
+    main()
+  File "/Users/shvnk/bmstu/mlops/dz11/mlops-course-shvnkq/hw11/experiments.py", line 438, in main
+    phase_a()
+  File "/Users/shvnk/bmstu/mlops/dz11/mlops-course-shvnkq/hw11/experiments.py", line 300, in phase_a
+    command(*H,"rollback","lab",str(good_revision),"--wait","--timeout","110s")
+  File "/Users/shvnk/bmstu/mlops/dz11/mlops-course-shvnkq/hw11/experiments.py", line 25, in command
+    return subprocess.run(args, cwd=ROOT, text=True, check=True, capture_output=True, **kwargs).stdout
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('helm', '--kube-context', 'kind-hw11', '-n', 'hw11', 'rollback', 'lab', '6', '--wait', '--timeout', '110s')' returned non-zero exit status 1.

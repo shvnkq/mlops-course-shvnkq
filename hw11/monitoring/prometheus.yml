@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 3s
+  evaluation_interval: 3s
+rule_files: [/etc/lab/alerts.yml]
+scrape_configs:
+  - job_name: inference
+    kubernetes_sd_configs:
+      - role: pod
+        namespaces: {names: [hw11]}
+    relabel_configs:
+      - action: keep
+        source_labels: [__meta_kubernetes_pod_label_app, __meta_kubernetes_pod_container_port_name]
+        regex: inference;http
+      - source_labels: [__meta_kubernetes_pod_name]
+        target_label: pod
+    metric_relabel_configs:
+      - action: keep
+        source_labels: [__name__]
+        regex: 'hw11_.*|process_cpu_seconds_total|process_resident_memory_bytes'
+  - job_name: kube-state
+    static_configs:
+      - targets: ['kube-state:8080']
+    metric_relabel_configs:
+      - action: keep
+        source_labels: [__name__,pod]
+        regex: 'kube_pod_status_ready;inference-.*'
